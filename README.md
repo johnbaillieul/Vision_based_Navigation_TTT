@@ -36,3 +36,12 @@ First of all, run `optical_flow.py` to obtain the optical flow vectors for a cer
 | **float32[]** vy               |
 
 Essential parameters for these three nodes are shown below. Other parameters exist and their default values are good for a large number of environments, but better performances can be achieved by changing those values to adapt the algorithm to the particular environment in which the robot has to move.
+
+|             |          Grouping           ||
+First Header  | Second Header | Third Header |
+ ------------ | :-----------: | -----------: |
+Content       |          *Long Cell*        ||
+Content       |   **Cell**    |         Cell |
+
+New section   |     More      |         Data |
+And more      | With an escaped '\|'         || 
