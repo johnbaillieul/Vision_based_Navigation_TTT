@@ -24,9 +24,9 @@ If you use the code in this repository, please cite [our paper](https://arxiv.or
 Our navigation strategy can be used with any mobile robot equipped with a monocular camera.
 
 First of all, run `optical_flow.py` to obtain the optical flow vectors for a certain number of features in the images (the image is divided in three regions, and for every region the most robust features are tracked). The node generates an `OpticaFlow` message with the following structure:
-| **OpticalFlow.msg  **          | 
-| ------------------------------ |
-| **Header** header              | 
+| **OpticalFlow.msg  **                                           | 
+| ----------------------------------------------------------------
+| **Header** header              | **uint32** height              |
 | **uint32** height              |
 | **uint32** width               | 
 | **float32** dt                 |
