@@ -39,8 +39,8 @@ Essential parameters for these three nodes are shown below. Other parameters exi
 | ~num_ext_features    | max number of features to be detected in the two outer parts of the image                                     |        250        |
 | ~num_cen_features    | max number of features to be detected in the central part of the image                                        |        150        |
 | ~min_feat_threshold  | minimum % of features that must still be in the image to avoid the reusage of the detector (range [0-1])      |        0.9        |
-| ~max_level           | pyramid level. When set to 0, it is used the Lukas-Kanade algorithm which does not use pyramids.              |         2         |
-| ~num_iterations      | number of iterations to find the correctly match the features                                                 |        10         |
+| ~max_level           | pyramid level. When set to 0, the Lukas-Kanade algorithm which does not use pyramids is used.                 |         2         |
+| ~num_iterations      | number of iterations to find the correct match for the features                                               |        10         |
 | ~epsilon             | matching quality. A bigger epsilon means the algorithm takes more time to find the correct match              |        0.03       |
 
 
