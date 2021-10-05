@@ -1,14 +1,8 @@
 # Visual Navigation Using Sparse Optical Flow and Time-to-Transit
 
-[![License: BSD-2-Clause](https://img.shields.io/github/license/QVPR/teach-repeat.svg?style=flat-square)](./LICENSE)
-[![stars](https://img.shields.io/github/stars/QVPR/teach-repeat.svg?style=flat-square)](https://github.com/Tobias-Fischer/ensemble-event-vpr/stargazers)
-[![GitHub issues](https://img.shields.io/github/issues/QVPR/teach-repeat?style=flat-square)](https://github.com/QVPR/teach-repeat/issues)
-[![GitHub repo size](https://img.shields.io/github/repo-size/QVPR/teach-repeat.svg?style=flat-square)](./README.md)
-[![BU Robotics Lab](https://sites.bu.edu/robotics/)](https://sites.bu.edu/robotics/)
+This repository contains code that allows navigation in unknown environments using only a monocular camera. The  work  takes  inspiration  from a  classic  paper  by  Lee  and  Reddish  (Nature,  1981, https://doi.org/10.1038/293293a0) in which they outline a behavioral strategy pursued by diving sea birds based on a visual cue called time-to-contact. The algorithm we introduce here is based on the estimation of a closely related concept called time-to-transit (TTT).
 
-This repository contains code that allows navigation in unknown environments using only a monocular camera. The  work  takes  inspiration  from a  classic  paper  by  Lee  and  Reddish  (Nature,  1981, https://doi.org/10.1038/293293a0) in which they outline a behavioral strategy pursued by diving sea birds basedon a visual cue called time-to-contact. The algorithm we introduce here is based on the estimation of a closely related concept called time-to-transit. For full details see our ICRA2022 paper, available on [arXiv](https://arxiv.org/abs/2010.11326).
-
-The main code is represented by three nodes: the `/OpticalFlow node` is  responsible  for  the  Optical FLow (OF) estimation.  It  acquires  a  sequence  of  images  from the  camera  mounted  on  the  robot  and  it  extracts the  relevant  features  to  finally  compute  the  OF vectors. The `/TauComputation node` analyzes the array of keypoints with their velocities packed in the OF message, it computes tau values and it creates input signals for the controller.
+The main code is represented by three nodes: the `/OpticalFlow node` is  responsible  for  the  Optical Flow (OF) estimation.  It  acquires  a  sequence  of  images  from the  camera  mounted  on  the  robot  and  it  extracts the  relevant  features  to  finally  compute  the  OF vectors. The `/TauComputation node` analyzes the array of keypoints with their velocities packed in the OF message, it computes tau values and it creates input signals for the controller. The `/Controller` selects the right control action to be used depending on the distribution of TTT values and it implements the Sense-Act cycle. For full details see our ICRA2022 paper, available on [arXiv](https://arxiv.org/abs/2010.11326).
 
 ![Overview of approach](assets/ICRArch2022.gif)
 
