@@ -34,7 +34,7 @@ Essential parameters for these three nodes are shown below. Other parameters exi
 ### Parameters for `optical_flow.py`
 
 | Parameter            | Description                                                                                                   |    Example Value  |
-| -------------------- | ------------------------------------------------------------------------------------------------------------- | ----------------- |
+| -------------------- | ------------------------------------------------------------------------------------------------------------- | :---------------: |
 | ~image_sub_name      | name of the Image topic to subscribe                                                                          | "front/image_raw" |
 | ~num_ext_features    | max number of features to be detected in the two outer parts of the image                                     |        250        |
 | ~num_cen_features    | max number of features to be detected in the central part of the image                                        |        150        |
