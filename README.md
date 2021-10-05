@@ -31,6 +31,14 @@ Finally, run `controller.py` which will make your robot move at a constant forwa
 
 Essential parameters for these three nodes are shown below. Other parameters exist and their default values are good for a large amount of environments, but better performances can be achieved by fine-tuning them to adapt the algorithm to the particular environment in which the robot has to move.
 
+### Parameters for `optical_flow.py`
+
+| Parameter            | Description                                                                                                   |  Example Value  |
+| -------------------- | ------------------------------------------------------------------------------------------------------------- | --------------- |
+| ~image_sub_name      | name of the Image topic to subscribe                                                                          | front/image_raw |        |
+| ~num_ext_features    | max number of features to be detected in the two outer parts of the image                                     | 250             |
+| ~num_cen_features    | max number of features to be detected in the central part of the image                                        | 150             |
+
 ## Virtual environments
 To simulate the behavior of the algorithm in artificial and realistic environments, many scenarios are created in Gazebo. In this repository you will find the code to recreate them. We also developed patterns to be put on the walls with fixed feature density (Bernoulli distributions of features). 
 
