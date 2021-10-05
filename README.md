@@ -31,3 +31,7 @@ Finally, run `controller.py` which will make your robot move at a constant forwa
 
 Essential parameters for these three nodes are shown below. Other parameters exist and their default values are good for a large amount of environments, but better performances can be achieved by fine-tuning them to adapt the algorithm to the particular environment in which the robot has to move.
 
+## Virtual environments
+To simulate the behavior of the algorithm in artificial and realistic environments, many scenarios are created in Gazebo. In this repository you will find the code to recreate them. We also developed patterns to be put on the walls with fixed feature density (Bernoulli distributions of features). 
+
+![Gazebo Environment](assets/Environments.png)
