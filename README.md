@@ -4,7 +4,7 @@
 [![stars](https://img.shields.io/github/stars/QVPR/teach-repeat.svg?style=flat-square)](https://github.com/Tobias-Fischer/ensemble-event-vpr/stargazers)
 [![GitHub issues](https://img.shields.io/github/issues/QVPR/teach-repeat?style=flat-square)](https://github.com/QVPR/teach-repeat/issues)
 [![GitHub repo size](https://img.shields.io/github/repo-size/QVPR/teach-repeat.svg?style=flat-square)](./README.md)
-[![QUT Centre for Robotics Open Source](https://img.shields.io/badge/collection-QUT%20Robotics-%23043d71?style=flat-square)](https://qcr.github.io)
+[![BU Robotics Lab](https://sites.bu.edu/robotics/)](https://sites.bu.edu/robotics/)
 
 This repository contains code that allows navigation in unknown environments using only a monocular camera. The  work  takes  inspiration  from a  classic  paper  by  Lee  and  Reddish  (Nature,  1981, https://doi.org/10.1038/293293a0) in which they outline a behavioral strategy pursued by diving sea birds basedon a visual cue called time-to-contact. The algorithm we introduce here is based on the estimation of a closely related concept called time-to-transit. For full details see our ICRA2022 paper, available on [arXiv](https://arxiv.org/abs/2010.11326).
 
