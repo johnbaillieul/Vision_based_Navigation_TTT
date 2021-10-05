@@ -23,25 +23,7 @@ If you use the code in this repository, please cite [our paper](https://arxiv.or
 
 Our navigation strategy can be used with any mobile robot equipped with a monocular camera.
 
-First of all, run `optical_flow.py` to obtain the optical flow vectors for a certain number of features in the images (the image is divided in three regions, and for every region the most robust features are tracked). The node generates an `OpticaFlow` message with the following structure:
-| **OpticalFlow.msg  **                                           | 
-| ----------------------------------------------------------------
-| **Header** header              | **uint32** height              |
-| **uint32** height              |
-| **uint32** width               | 
-| **float32** dt                 |
-| **float32[]** x                |
-| **float32**[] y                |
-| **float32[]** vx               |
-| **float32[]** vy               |
+First of all, run `optical_flow.py` to obtain the optical flow vectors for a certain number of features in the images (the image is divided in three regions, and for every region the most robust features are tracked). The node generates an `OpticaFlow` message containing position, velocity (px/s) of the features and the time delta (s) between the frame considered (to make real-time computation feasible on different platforms, a choosable -but fixed- number of frames can be skipped).
 
 Essential parameters for these three nodes are shown below. Other parameters exist and their default values are good for a large number of environments, but better performances can be achieved by changing those values to adapt the algorithm to the particular environment in which the robot has to move.
 
-|             |          Grouping           ||
-First Header  | Second Header | Third Header |
- ------------ | :-----------: | -----------: |
-Content       |          *Long Cell*        ||
-Content       |   **Cell**    |         Cell |
-
-New section   |     More      |         Data |
-And more      | With an escaped '\|'         || 
