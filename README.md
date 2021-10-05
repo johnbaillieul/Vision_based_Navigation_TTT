@@ -34,4 +34,4 @@ Essential parameters for these three nodes are shown below. Other parameters exi
 ## Virtual environments
 To simulate the behavior of the algorithm in artificial and realistic environments, many scenarios are created in Gazebo. In this repository you will find the code to recreate them. We also developed patterns to be put on the walls with fixed feature density (Bernoulli distributions of features). 
 
-![Gazebo Environment](assets/Environments.png)
+![Gazebo Environment](assets/Environments.jpg)
