@@ -23,7 +23,7 @@ If you use the code in this repository, please cite [our paper](https://arxiv.or
 
 Our navigation strategy can be used with any mobile robot equipped with a monocular camera.
 
-First of all, run `optical_flow.py` to obtain the optical flow vectors for a certain number of features in the image (which is divided in three regions, and for every region the most robust features are tracked). The node generates `OpticaFlow.msg` containing position, velocity (px/s) of the features and the time delta (s) between the frames considered (to make real-time computation feasible on different platforms, a choosable but fixed number of frames can be skipped). Run the .py file with an additional random integer parameter (e.g. `rosrun <package> optical_flow.py 1`) if you want to enable a real-time visual representation of the node's output.
+First of all, run `optical_flow.py` to obtain the optical flow vectors for a certain number of features in the image (which is divided in three regions, and for every region the most robust features are tracked). The node generates `OpticaFlow.msg` containing position, velocity (px/s) of the features and the time delta (s) between the frames considered (to make real-time computation feasible on different platforms, a choosable but fixed number of frames can be skipped). Run the .py file with an the additional integer parameter 1 (e.g. `rosrun <package> optical_flow.py 1`) if you want to enable a real-time visual representation of the node's output.
 
 ![OF Node Output](assets/OFNode.gif)
 
