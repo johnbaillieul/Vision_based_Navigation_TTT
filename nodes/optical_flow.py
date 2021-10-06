@@ -110,6 +110,8 @@ class OFCalculator:
         self.prev_time = 0
 	#Re-usage of the detector
 	self.detect_again = True
+	#Minimum number of features
+	self.min_num_features = (2*self.num_ext_features + self.num_cen_features)/2
         # Masks for the three sub-images
         self.roi_el = np.array([])
         self.roi_er = np.array([])
@@ -268,6 +270,8 @@ class OFCalculator:
         good_kps_old = self.prev_kps[status == 1]
 
 	if np.size(good_kps_new) <= self.min_feat_threshold*np.size(self.prev_kps):
+		self.detect_again = True
+	else if np.size(good_kps_new) <= self.min_num_features:
 		self.detect_again = True
 	else:
 		self.detect_again = False
