@@ -95,7 +95,7 @@ class OFCalculator:
 	self.image_sub_name = "front/image_raw"
 	self.num_ext_features = 250 
 	self.num_cen_features = 100
-	self.min_feat_threshold = 0.9
+	self.min_feat_threshold = 1.0
 	###########################################
 
 	 # Initialize Image acquisition
