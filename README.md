@@ -27,18 +27,6 @@ First of all, run `optical_flow.py` to obtain the optical flow vectors for a cer
 
 <p align="center">
 ![OF Node Output](assets/OFNode.gif)
-This is from GitHub's support:
-
-Hey Waldyr,
-
-Markdown doesn't allow you to tweak alignment directly (see docs here: http://daringfireball.net/projects/markdown/syntax#img), but you can just use a raw HTML 'img' tag and do the alignment with inline css.
-
-Cheers,
-
-So it is possible to align images! You just have to use inline CSS to solve the problem. You can take an example from my GitHub repository. At the bottom of README.md there is a centered aligned image. For simplicity you can just do as follows:
-
-<p align="center">
-  <img src="http://some_place.com/image.png" />
 </p>
 
 Then, it's time to run `tau_computation.py` to obtain the average time-to-transit values for every Region-Of-Interest (ROI). The dimension and the position of those regions can be selected and they can be adapated to the environment in which the robot moves. The number of ROIs in the code presented here is fixed but it in principle it can be modified. In this case the controller must be notified of the change and different control laws must be used (stability for Tau Balancing control law with values coming from *n* different ROIs is guaranteed and simple to demonstrate, see [our paper](https://arxiv.org/abs/2010.11326)). The node outputs `TauComputation.msg` used by the controller to select the proper control action. If the number of features in a ROI is not sufficiently high to guarantee a robust TTT estimation, a -1.0 is assigned to the specific region.
