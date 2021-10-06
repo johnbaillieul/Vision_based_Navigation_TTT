@@ -31,6 +31,8 @@ Then, it's time to run `tau_computation.py` to obtain the average time-to-transi
 
 Finally, run `controller.py` which will make your robot move at a constant forward speed (by default: 1m/s). A steering command will be sent to the robot to align it to the center of the environment and to avoid obstacles.
 
+![Tests](assets/tests.gif)
+
 Essential parameters for these three nodes are shown below. Other parameters exist and their default values are good for a large amount of environments, but better performances can be achieved by fine-tuning them to adapt the algorithm to the particular environment in which the robot has to move.
 
 ### Parameters for `optical_flow.py`
