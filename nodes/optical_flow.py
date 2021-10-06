@@ -108,7 +108,7 @@ class OFCalculator:
         self.prev_kps = None
         # Previous time instant
         self.prev_time = 0
-	#Re-usage of features
+	#Re-usage of the detector
 	self.detect_again = True
         # Masks for the three sub-images
         self.roi_el = np.array([])
