@@ -31,7 +31,7 @@ Then, it's time to run `tau_computation.py` to obtain the average time-to-transi
 
 ![Tau Computation Node Output](assets/tttnode.gif)
 
-Finally, run `controller.py` which will make your robot move at a constant forward speed (by default: 1m/s). A steering command will be sent to the robot to align it to the center of the environment and to avoid obstacles.
+Finally, run `controller.py` which will make your robot move at a constant forward speed (by default: 1m/s). The proper steering command will be sent to the robot to align it to the center of the environment and to avoid obstacles. The controller implements the Sense-Act cycle and it is able to choose the right control law depending on the distribution of the time-to-transit values in the image. Tau Balancing based on 2 and 4 ROIs is implemented together with the Single Wall strategy which is a new control action that enables navigation in environments with few and localized features.
 
 ![Tests](assets/tests.gif)
 
