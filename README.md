@@ -8,8 +8,7 @@ The main code is represented by three nodes: the `/OpticalFlow node` is  respons
 
 ## License and attribution
 
-If you use the code in this repository, please cite [our paper]( https://www.baillieul.org/Robotics/ICRA22_0387_Submission.pdf.
-). The code is available under the [BSD-2-Clause License](./LICENSE).
+If you use the code in this repository, please cite [our paper](https://www.baillieul.org/Robotics/ICRA22_0387_Submission.pdf). The code is available under the [BSD-2-Clause License](./LICENSE).
 
 ```bibtex
 @inproceedings{bbzbaillieul2021,
