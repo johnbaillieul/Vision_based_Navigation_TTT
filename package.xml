@@ -2,7 +2,7 @@
 <package format="2">
   <name>visual_navigation</name>
   <version>0.0.0</version>
-  <description>The visial navigation implementation</description>
+  <description>The visual navigation implementation</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->
