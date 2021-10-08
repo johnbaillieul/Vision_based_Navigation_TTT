@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>vision_navigation</name>
+  <name>visual_navigation</name>
   <version>0.0.0</version>
-  <description>The vision navigation package</description>
+  <description>The visial navigation implementation</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->
