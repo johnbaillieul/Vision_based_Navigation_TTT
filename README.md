@@ -50,10 +50,10 @@ Essential parameters for these three nodes are shown below. Other parameters exi
 
 | Parameter            | Description                                                                                                   |        Example Value      |
 | -------------------- | ------------------------------------------------------------------------------------------------------------- | :-----------------------: |
-| ~x_init_l            | x coordinate of the top left corner of ROI                                                                    |              0            |
-| ~y_init_l            | y coordinate of the top left corner of ROI                                                                    |              0            |
-| ~x_end_l             | x coordinate of the bottom right corner of ROI                                                                | int(3 * img_width / 12)   |
-| ~y_end_l             | y coordinate of the bottom right corner of ROI                                                                | int(7.5 * img_width / 12) |
+| ~x_init_*ROIid*      | x coordinate of the top left corner of ROI                                                                    |              0            |
+| ~y_init_*ROIid*      | y coordinate of the top left corner of ROI                                                                    |              0            |
+| ~x_end_*ROIid*       | x coordinate of the bottom right corner of ROI                                                                | int(3 * img_width / 12)   |
+| ~y_end_*ROIid*       | y coordinate of the bottom right corner of ROI                                                                | int(7.5 * img_width / 12) |
 
 
 
