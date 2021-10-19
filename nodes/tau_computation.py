@@ -187,6 +187,8 @@ class TauComputation:
     def __init__(self):
 
         ######## IMPORTANT PARAMETERS: ########
+        # Minimum number of features needed to compute the average TTT for each ROI
+        self.min_TTT_number = 10
         self.image_sub_name = "front/image_raw"
         #######################################
 
@@ -194,8 +196,6 @@ class TauComputation:
         self.first_time = True
         # Initialize current image
         self.curr_image = None
-        # Minimum number of features needed to compute the average TTT for each ROI
-        self.min_TTT_number = 10
 
         # Initialize Image acquisition
         self.bridge = CvBridge()
