@@ -48,12 +48,12 @@ Essential parameters for these three nodes are shown below. Other parameters exi
 
 ### Parameters for `tau_computation.py`
 
-| Parameter            | Description                                                                                                   |    Example Value  |
-| -------------------- | ------------------------------------------------------------------------------------------------------------- | :---------------: |
-| ~x_init_l            | name of the Image topic to subscribe.                                                                         | "front/image_raw" |
-| ~y_init_l            | max number of features to be detected in the two outer parts of the image.                                    |        250        |
-| ~x_end_l             | max number of features to be detected in the central part of the image.                                       |        150        |
-| ~x_end_l             | minimum % of tracked features that must still be in the detector. Parameter must stay in range (0.0-1.0].     |        0.7        |
+| Parameter            | Description                                                                                                   |        Example Value      |
+| -------------------- | ------------------------------------------------------------------------------------------------------------- | :-----------------------: |
+| ~x_init_l            | x coordinate of the top left corner of ROI                                                                    |              0            |
+| ~y_init_l            | y coordinate of the top left corner of ROI                                                                    |              0            |
+| ~x_end_l             | x coordinate of the bottom right corner of ROI                                                                | int(3 * img_width / 12)   |
+| ~y_end_l             | y coordinate of the bottom right corner of ROI                                                                | int(7.5 * img_width / 12) |
 
 
 
