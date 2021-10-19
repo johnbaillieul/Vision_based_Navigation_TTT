@@ -50,6 +50,7 @@ Essential parameters for these three nodes are shown below. Other parameters exi
 
 | Parameter            | Description                                                                                                   |        Example Value      |
 | -------------------- | ------------------------------------------------------------------------------------------------------------- | :-----------------------: |
+| ~image_sub_name      | name of Image topic to subscribe to allow visual representation of results of the nome. The same used in `optical_flow.py` | "front/image_raw": |
 | ~min_TTT_number      | minimum number of features needed to compute the average TTT for each ROI                                     |             10            |
 | ~x_init_*ROI*        | x coordinate of the top left corner of ROI                                                                    |              0            |
 | ~y_init_*ROI*        | y coordinate of the top left corner of ROI                                                                    |              0            |
