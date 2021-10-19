@@ -48,6 +48,7 @@ y_end_d = 0
 # Definition of the limits for the ROIs
 def set_limit(img_width, img_height):
     
+    ########## IMPORTANT PARAMETERS: ##########
     # Extreme left and extreme right
     global x_init_el
     global y_init_el
@@ -105,6 +106,7 @@ def set_limit(img_width, img_height):
     y_init_d = int(3 * img_height / 12)
     x_end_d = int(6.5 * img_width / 12)
     y_end_d = int(6 * img_height / 12)
+    ###########################################
 
 ##############################################################################################
 
