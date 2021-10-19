@@ -48,7 +48,7 @@ Essential parameters for these three nodes are shown below. Other parameters exi
 
 
 ## Virtual environments
-To simulate the behavior of the algorithm in artificial and realistic environments, many scenarios are created in Gazebo. In this repository you will find the code to recreate them in the GazeboWorlds folder.  
+To simulate the behavior of the algorithm in artificial and realistic environments, many scenarios are created in Gazebo. In this repository you will find the code to recreate them in the **GazeboWorlds** folder.  
 
 ![Gazebo Environment](assets/Environments.jpg)
 
