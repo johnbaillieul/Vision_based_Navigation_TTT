@@ -68,3 +68,4 @@ material BernoulliMix/X
     }
  }
  ```
+ ![Features density](assets/FeaturesDensity.png)
