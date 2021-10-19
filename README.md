@@ -55,7 +55,7 @@ Essential parameters for these three nodes are shown below. Other parameters exi
 | ~x_end_*ROI*       | x coordinate of the bottom right corner of ROI                                                                | int(3 * img_width / 12)   |
 | ~y_end_*ROI*       | y coordinate of the bottom right corner of ROI                                                                | int(7.5 * img_width / 12) |
 
-
+where *ROI*={*el*: far left ROI, *er*: far right ROI, *l*: left ROI, *r*: right ROI, *c*: central ROI}
 
 
 ## Virtual environments
