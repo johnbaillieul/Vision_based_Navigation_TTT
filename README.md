@@ -54,8 +54,8 @@ Essential parameters for these three nodes are shown below. Other parameters exi
 | ~min_TTT_number      | minimum number of features needed to compute the average TTT for each ROI                                     |             10            |
 | ~x_init_*ROI*        | x coordinate of the top left corner of ROI                                                                    |              0            |
 | ~y_init_*ROI*        | y coordinate of the top left corner of ROI                                                                    |              0            |
-| ~x_end_*ROI*         | x coordinate of the bottom right corner of ROI                                                                | int(3 * img_width / 12)   |
-| ~y_end_*ROI*         | y coordinate of the bottom right corner of ROI                                                                | int(7.5 * img_width / 12) |
+| ~x_end_*ROI*         | x coordinate of the bottom right corner of ROI                                                                | int(3\*img_width/12)      |
+| ~y_end_*ROI*         | y coordinate of the bottom right corner of ROI                                                                | int(7.5\*img_width/12)    |
 
 where *ROI*={*el*: far left ROI, *er*: far right ROI, *l*: left ROI, *r*: right ROI, *c*: central ROI}
 
