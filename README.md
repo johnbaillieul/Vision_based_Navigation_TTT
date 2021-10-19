@@ -46,6 +46,17 @@ Essential parameters for these three nodes are shown below. Other parameters exi
 | ~num_cen_features    | max number of features to be detected in the central part of the image.                                       |        150        |
 | ~min_feat_threshold  | minimum % of tracked features that must still be in the image to avoid the reusage of the detector. Parameter must stay in range (0.0-1.0].      |        0.7        |
 
+### Parameters for `tau_computation.py`
+
+| Parameter            | Description                                                                                                   |    Example Value  |
+| -------------------- | ------------------------------------------------------------------------------------------------------------- | :---------------: |
+| ~x_init_l            | name of the Image topic to subscribe.                                                                         | "front/image_raw" |
+| ~y_init_l            | max number of features to be detected in the two outer parts of the image.                                    |        250        |
+| ~x_end_l             | max number of features to be detected in the central part of the image.                                       |        150        |
+| ~x_end_l             | minimum % of tracked features that must still be in the detector. Parameter must stay in range (0.0-1.0].     |        0.7        |
+
+
+
 
 ## Virtual environments
 To simulate the behavior of the algorithm in artificial and realistic environments, many scenarios are created in Gazebo. In this repository you will find the code to recreate them in the **GazeboWorlds** folder.  
