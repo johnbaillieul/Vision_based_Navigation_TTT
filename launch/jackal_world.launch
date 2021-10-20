@@ -1,0 +1,30 @@
+<launch>
+
+
+  <!-- Short-term hack to support the original front_laser:=true argument for spawning
+       the simulator. This will be removed in favour of using the config:=x arg instead. -->
+  <arg name="front_flea3" default="false" />
+  <arg name="default_config" value="front_flea3" if="$(arg front_flea3)" />
+  <arg name="default_config" value="base" unless="$(arg front_flea3)" />
+  <!-- end of hack -->
+ 
+  <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find envtest1_gazebo)/worlds/corridor.world"/>
+    <!-- more default parameters can be changed here -->
+  </include>
+
+<!-- Configuration of Jackal which you would like to simulate.
+       See jackal_description for details. -->
+    <arg name="config" default="$(arg default_config)" />
+
+  <!-- Spawn Jackal -->
+  <include file="$(find envtest1_gazebo)/launch/spawn_jackal.launch">
+    <arg name="x" value="0" />
+    <arg name="y" value="0" />
+    <arg name="z" value="1.0" />
+    <arg name="yaw" value="0" />
+    <arg name="config" value="$(arg config)" />
+  </include>
+
+</launch>
