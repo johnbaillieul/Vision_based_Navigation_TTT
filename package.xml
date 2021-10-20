@@ -55,6 +55,7 @@
   <build_depend>roscpp</build_depend>
   <build_depend>roslib</build_depend>
   <build_depend>rospy</build_depend>
+  <build_depend>roslaunch</build_depend>
   <build_depend>sensor_msgs</build_depend>
   <build_depend>std_msgs</build_depend>
   <build_depend>python-numpy</build_depend>
@@ -79,6 +80,14 @@
   <exec_depend>python-time</exec_depend>
   <exec_depend>python-sys</exec_depend>
   <exec_depend>message_runtime</exec_depend>
+  
+  <exec_depend version_gte="0.3">jackal_gazebo</exec_depend>
+  <exec_depend>gazebo_ros</exec_depend>
+  <exec_depend>gazebo_ros_control</exec_depend>
+  <exec_depend>gazebo_plugins</exec_depend>
+  <exec_depend>hector_gazebo_plugins</exec_depend>
+  <exec_depend version_gte="0.5">jackal_control</exec_depend>
+  <exec_depend version_gte="0.5">jackal_description</exec_depend>
 
 
   <!-- The export tag contains other, unspecified, tags -->
