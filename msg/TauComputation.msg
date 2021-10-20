@@ -5,4 +5,4 @@ float32 tau_el
 float32 tau_er
 float32 tau_l
 float32 tau_r
-float32 tau_d
+float32 tau_c
