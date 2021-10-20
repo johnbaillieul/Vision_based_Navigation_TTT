@@ -33,13 +33,7 @@ y_init_r = 0
 x_end_r = 0
 y_end_r = 0
 
-# Upward
-x_init_u = 0
-y_init_u = 0
-x_end_u = 0
-y_end_u = 0
-
-# Downward
+# Centre
 x_init_d = 0
 y_init_d = 0
 x_end_d = 0
@@ -87,17 +81,7 @@ def set_limit(img_width, img_height):
     x_end_r = int(9 * img_width / 12)
     y_end_r = int(7 * img_height / 12)
 
-    # Upward
-    global x_init_u
-    global y_init_u
-    global x_end_u
-    global y_end_u
-    x_init_u = int(4.5 * img_width / 12)
-    y_init_u = int(2 * img_height / 12)
-    x_end_u = int(7.5 * img_width / 12)
-    y_end_u = int(3 * img_height / 12)
-
-    # Downward
+    # Centre
     global x_init_d
     global y_init_d
     global x_end_d
@@ -162,13 +146,8 @@ def draw_image_segmentation(curr_image, tau_el, tau_er, tau_l, tau_r, tau_u, tau
     cv2.putText(color_image, str(round(tau_r, 1)),
                 (int((x_end_r + x_init_r) / 2.1), int((y_end_r + y_init_r) / 2)),
                 font, 1, (0, 255, 0), 2, cv2.LINE_AA)
-    # Upward
-    # cv2.rectangle(color_image, (x_init_u, y_init_u), (x_end_u, y_end_u), color_red, linewidth)
-    # cv2.putText(color_image, str(round(tau_u, 1)),
-    # (int((x_end_u + x_init_u) / 2.1), int((y_end_u + y_init_u) / 2)),
-    # font, 1, (0, 0, 255), 2, cv2.LINE_AA)
 
-    # Downward/Centre (if no upward is defined)
+    # Centre 
     cv2.rectangle(color_image, (x_init_d, y_init_d), (x_end_d, y_end_d), color_red, linewidth)
     cv2.putText(color_image, str(round(tau_d, 1)),
                 (int((x_end_d + x_init_d) / 2.1), int((y_end_d + y_init_d) / 2)),
@@ -237,10 +216,8 @@ class TauComputation:
         count_left = 0
         count_right = 0
 
-        # Initialization tau computation upward and downward
-        tau_up = np.array([])
+        # Initialization tau computation centre
         tau_down = np.array([])
-        count_up = 0
         count_down = 0
 
         # TTT values computation
@@ -264,11 +241,7 @@ class TauComputation:
                 tau_left = np.append(tau_left, (x[i]**2 + y[i]**2)**0.5 / (data.vx[i]**2 + data.vy[i]**2)**0.5)
                 count_left += 1
 
-            # Upward and downward
-            if (x[i] >= (x_init_u - xc)) and (x[i] <= (x_end_u - xc)) \
-                    and (y[i] >= (y_init_u - yc)) and (y[i] <= (y_end_u - yc)):
-                tau_up = np.append(tau_up, (x[i] ** 2 + y[i] ** 2) ** 0.5 / (data.vx[i] ** 2 + data.vy[i] ** 2) ** 0.5)
-                count_up += 1
+            # Centre
             if (x[i] >= (x_init_d - xc)) and (x[i] <= (x_end_d - xc)) \
                     and (y[i] >= (y_init_d - yc)) and (y[i] <= (y_end_d - yc)):
                 tau_down = np.append(tau_down,
@@ -282,8 +255,7 @@ class TauComputation:
         # Right and left
         tau_right = tau_filtering(tau_right)
         tau_left = tau_filtering(tau_left)
-        # Up and Down
-        tau_up = tau_filtering(tau_up)
+        # Centre
         tau_down = tau_filtering(tau_down)
         # Extreme right and left
         final_tau_left_e = tau_final_value(self, tau_left_e, count_left_e)
@@ -295,10 +267,8 @@ class TauComputation:
         final_tau_right = tau_final_value(self, tau_right, count_right)
         print("Tau right: " + str(final_tau_right))
         print("Tau left: " + str(final_tau_left))
-        # Up and down
-        final_tau_up = tau_final_value(self, tau_up, count_up)
+        # Centre
         final_tau_down = tau_final_value(self, tau_down, count_down)
-        print("Tau up: " + str(final_tau_up))
         print("Tau down: " + str(final_tau_down))
 
         # Publish Tau values data to rostopic
@@ -314,13 +284,11 @@ class TauComputation:
         msg.tau_er = final_tau_right_e
         msg.tau_l = final_tau_left
         msg.tau_r = final_tau_right
-        msg.tau_u = final_tau_up
         msg.tau_d = final_tau_down
         self.tau_values.publish(msg)
 
         # Draw the ROIs with their TTT values
-        draw_image_segmentation(self.curr_image, final_tau_left_e, final_tau_right_e, final_tau_left, final_tau_right,
-        final_tau_up, final_tau_down)
+        draw_image_segmentation(self.curr_image, final_tau_left_e, final_tau_right_e, final_tau_left, final_tau_right, final_tau_down)
 
     # Callback for the image topic
     def callback_img(self, data):
