@@ -67,7 +67,7 @@ where *ROI*={*el*: far left ROI, *er*: far right ROI, *l*: left ROI, *r*: right 
 | ~percentage          | percentage of discarded time-to-transit values for each ROI                                                   |             10           
 | ~max_u               | saturation value for the control input. It depends on the specifics of the selected robot.                    |              0            |
 
-Note that it is also possible to tune the duration of the *Sense* and *Act* cycle.
+Note that it is also possible to tune the duration of the *Sense* and *Act* cycles.
 
 ## Virtual environments
 To simulate the behavior of the algorithm in artificial and realistic environments, many scenarios are created in Gazebo. In this repository you will find the code to recreate them in the **GazeboWorlds** folder.  
