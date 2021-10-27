@@ -161,7 +161,7 @@ def draw_image_segmentation(curr_image, tau_el, tau_er, tau_l, tau_r, tau_u, tau
 #######################################################################################################################
 
 
-class TauComputation:
+class TauComputationClass:
 
     def __init__(self):
 
@@ -301,7 +301,7 @@ class TauComputation:
 
 def tau_computation():
     rospy.init_node("tau_computation", anonymous=False)
-    TauComputation()
+    TauComputationClass()
     rospy.spin()
 
 
