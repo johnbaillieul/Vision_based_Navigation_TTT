@@ -232,6 +232,21 @@ class OFCalculator:
 		 # Draw the flow field
 		if self.show == 1:
 		 	draw_optical_flow_field(curr_image, good_kps_old, good_kps_new, flow, dt)
+			
+		# Publish Optical Flow data to rostopic
+		msg = OpticalFlow()
+		msg.header.stamp.secs = secs
+		msg.header.stamp.nsecs = nsecs
+
+		msg.height = data.height
+		msg.width = data.width
+
+		msg.dt = dt  # in msec
+		msg.x = good_kps_old[:, 0]
+		msg.y = good_kps_old[:, 1]
+		msg.vx = flow[:, 0] / dt
+		msg.vy = flow[:, 1] / dt
+		self.optic_flow_pub.publish(msg)
 
 		self.prev_image = curr_image
 		self.prev_kps = np.float32(good_kps_new.reshape(-1, 1, 2))
