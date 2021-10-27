@@ -256,7 +256,7 @@ class TauComputationClass:
         tau_right = tau_filtering(tau_right)
         tau_left = tau_filtering(tau_left)
         # Centre
-        tau_centre = tau_filtering(tau_down)
+        tau_centre = tau_filtering(tau_center)
         # Extreme right and left
         final_tau_left_e = tau_final_value(self, tau_left_e, count_left_e)
         final_tau_right_e = tau_final_value(self, tau_right_e, count_right_e)
