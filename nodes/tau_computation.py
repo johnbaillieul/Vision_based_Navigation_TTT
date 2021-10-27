@@ -120,7 +120,7 @@ def tau_final_value(self, vector, cnt):
 ###########################################################################################
 
 # Visual representation of the ROIs with the average TTT values
-def draw_image_segmentation(curr_image, tau_el, tau_er, tau_l, tau_r, tau_u, tau_d):
+def draw_image_segmentation(curr_image, tau_el, tau_er, tau_l, tau_r, tau_c):
 
     color_image = cv2.cvtColor(curr_image, cv2.COLOR_GRAY2BGR)
     color_blue = [255, 0, 0]  
@@ -256,7 +256,7 @@ class TauComputationClass:
         tau_right = tau_filtering(tau_right)
         tau_left = tau_filtering(tau_left)
         # Centre
-        tau_centre = tau_filtering(tau_center)
+        tau_centre = tau_filtering(tau_centre)
         # Extreme right and left
         final_tau_left_e = tau_final_value(self, tau_left_e, count_left_e)
         final_tau_right_e = tau_final_value(self, tau_right_e, count_right_e)
