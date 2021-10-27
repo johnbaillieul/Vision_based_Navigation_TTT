@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import rospy
 from sensor_msgs.msg import Image
-from visual_navigation.msg import OpticalFlowMsg
+from visual_navigation.msg import OpticalFlow
 from cv_bridge import CvBridgeError, CvBridge
 import cv2
 import sys
@@ -136,7 +136,7 @@ class OFCalculator:
         self.image_sub = rospy.Subscriber(self.image_sub_name, Image, self.callback)
 
         # Optical flow message Publisher
-        self.optic_flow_pub = rospy.Publisher("optical_flow", OpticalFlowMsg, queue_size=10)
+        self.optic_flow_pub = rospy.Publisher("optical_flow", OpticalFlow, queue_size=10)
 
     def callback(self, data):
 
@@ -219,9 +219,9 @@ class OFCalculator:
             if len(good_kps_new) < self.min_feat_threshold*np.size(self.prev_kps):
                 self.tracking = False
 		self.prev_kps = np.array([], dtype='f')
-            else if np.size(good_kps_new) <= self.min_num_features:
-		    self.tracking = False
-                    self.prev_kps = np.array([], dtype='f')
+            elif np.size(good_kps_new) <= self.min_num_features:
+		 self.tracking = False
+                 self.prev_kps = np.array([], dtype='f')
 	    else:
 		 # Get time between images
 		dt = curr_time - self.prev_time
