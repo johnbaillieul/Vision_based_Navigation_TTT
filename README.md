@@ -93,7 +93,7 @@ material BernoulliMix/X
  ![Features density](assets/FeaturesDensity.png)
  
  ### Launch the Simulation
- 1. Launch the file **jackal_world.launch**. It is possible to simulate the desired world by substituting the default world with the desired one in the launch file: 
+ 1. Launch the file **jackal_world.launch**. It is possible to simulate the desired world by substituting the default world with the desired one in the launch file at this line: 
 *arg name="world_name" value="$(find envtest1_gazebo)/worlds/<desired .world file>"/*. 
 The jackal robot model has a lot of different sensors but for our purposes the only needed is the monocular camera. The robot model, with the monocula camera mounted on it, can be obtained in the simulation environment by using the following command: `roslaunch visual_navigation jackal_world.launch config:=front_flea3`.
- 2. Run the `optical_flow.py`, `tau_computation.py` and the `controller.py` nodes by using the following command: `rosrun visual_navigation <name of the node>`.
+ 2. Run the **optical_flow.py**, **tau_computation.py** and the **controller.py** nodes by using the following command: `rosrun visual_navigation <name of the node>`.
