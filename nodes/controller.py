@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import rospy
 from geometry_msgs.msg import Twist
-from visual_navigation.msg import TauComputation
+from Vision_based_Navigation_TTT.msg import TauComputation
 import numpy as np
 import time
 import sys
