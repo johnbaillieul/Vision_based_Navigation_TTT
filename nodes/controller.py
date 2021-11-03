@@ -344,8 +344,8 @@ class Controller:
                         u_prop = self.kp_e * control_e + self.kp * control_m
                         if u_diff * u_prop <= 0:
                             control = u_prop + u_diff
-                            print('\033[1m'+"Tau Balancing Derivative"+'\033[0m')
-                            print("control derivative tau balancing: " + str(control))
+                            print('\033[1m'+"Tau Balancing"+'\033[0m')
+                            print("control tau balancing: " + str(control))
                         else:
                             control = u_prop
                             print('\033[1m'+"Tau Balancing"+'\033[0m')
@@ -357,7 +357,7 @@ class Controller:
 
                 elif self.extreme_right:   # Only extreme right ROI has a TTT value ---> Single Wall strategy
                     self.kp = 1
-                    print('\033[1m'+"Tau Difference Maximizing on extreme right"+'\033[0m')
+                    print('\033[1m'+"Single wall strategy on extreme right"+'\033[0m')
                     if self.first_tdm_r:
                         self.first_tdm_r = False
                         self.first_tdm_l = True
@@ -367,10 +367,10 @@ class Controller:
                         self.actual_wall_distance_e = 1
                     control = -self.kp * (self.mean_tau_er - self.actual_wall_distance_e)
                     print("actual distance: " + str(self.actual_wall_distance_e))
-                    print("control tau diff max: " + str(control))
+                    print("control: " + str(control))
                 elif self.right:            # Only right ROI has a TTT value ---> Single Wall strategy
                     self.kp = 1
-                    print('\033[1m'+"Tau Difference Maximizing on right"+'\033[0m')
+                    print('\033[1m'+"Single wall strategy on right"+'\033[0m')
                     if self.first_tdm_r:
                         self.first_tdm_r = False
                         self.first_tdm_l = True
@@ -380,7 +380,7 @@ class Controller:
                         self.actual_wall_distance_e = 1
                     control = -self.kp * (self.mean_tau_r - self.actual_wall_distance)
                     print("actual distance: " + str(self.actual_wall_distance))
-                    print("control tau diff max: " + str(control))
+                    print("control: " + str(control))
                 elif self.extreme_left:         # Only extreme left ROI has a TTT value ---> Single Wall strategy
                     self.kp = 1
                     if self.first_tdm_l:
@@ -390,13 +390,13 @@ class Controller:
                         self.actual_wall_distance_e = self.dist_from_wall_el + self.safe_dist
                         self.actual_wall_distance = 1
                         self.actual_wall_distance_e = 1
-                    print('\033[1m'+"Tau Difference Maximizing on extreme left"+'\033[0m')
+                    print('\033[1m'+"Single wall strategy on extreme left"+'\033[0m')
                     control = self.kp * (self.mean_tau_el - self.actual_wall_distance_e)
                     print("actual distance: " + str(self.actual_wall_distance_e))
-                    print("control tau diff max: " + str(control))
+                    print("control: " + str(control))
                 elif self.left:                 # Only left ROI has a TTT value ---> Single Wall strategy
                     self.kp = 1
-                    print('\033[1m'+"Tau Difference Maximizing on left"+'\033[0m')
+                    print('\033[1m'+"Single wall strategy on left"+'\033[0m')
                     if self.first_tdm_l:
                         self.first_tdm_l = False
                         self.first_tdm_r = True
@@ -406,7 +406,7 @@ class Controller:
                         self.actual_wall_distance_e = 1
                     control = self.kp * (self.mean_tau_l - self.actual_wall_distance)
                     print("actual distance: " + str(self.actual_wall_distance))
-                    print("control tau diff max: " + str(control))
+                    print("control: " + str(control))
 
                 # Verify the value of the control action and limit it if needed
                 control = threshold(control, self.max_u)
