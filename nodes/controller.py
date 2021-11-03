@@ -410,7 +410,6 @@ class Controller:
 
                 # Verify the value of the control action and limit it if needed
                 control = threshold(control, self.max_u)
-                self.file_u.write(str(control) + "\n")
 
                 # Publish Steering signal
                 msg = Twist()
