@@ -18,7 +18,7 @@ If you use the code in this repository, please cite [our paper](https://www.bail
       year={2022}
 }
 ```
-## Prequesites
+## Prerequisites
 
 - Ubuntu 18.04.
 - Clearpath package to simulate Jackal UGV, use the following instruction: `sudo apt-get install ros-<distro>-jackal-simulator ros-<distro>-jackal-desktop ros-<distro>-jackal-navigation`.
