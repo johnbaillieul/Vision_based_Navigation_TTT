@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(Vision_based_Navigation_TTT)
+project(vision_based_navigation_ttt)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)

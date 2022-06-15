@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>Vision_based_Navigation_TTT</name>
+  <name>vision_based_navigation_ttt</name>
   <version>0.0.0</version>
   <description>The visual navigation implementation</description>
 
