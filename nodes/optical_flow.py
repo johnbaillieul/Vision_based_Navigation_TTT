@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import rospy
 from sensor_msgs.msg import Image
-from Vision_based_Navigation_TTT.msg import OpticalFlow
+from vision_based_navigation_ttt.msg import OpticalFlow
 from cv_bridge import CvBridgeError, CvBridge
 import cv2
 import sys
@@ -36,13 +36,13 @@ def set_limit(img_width, img_height):
     global y_end_el
     x_init_el = 0
     y_init_el = 0
-    y_end_el = int(7.5 * img_height / 12)
+    y_end_el = int(11 * img_height / 12)
 
     global x_end_er
     global y_end_er
     global y_init_er
     x_end_er = int(img_width)
-    y_end_er = int(7.5 * img_height / 12)
+    y_end_er = int(11 * img_height / 12)
     y_init_er = 0
 
     # Left and right
@@ -68,8 +68,8 @@ def draw_optical_flow_field(gray_image, points_old, points_new, flow, dt):
     color_red = [0, 255, 0]  # bgr colorspace
     linewidth = 3
 
-    print("Old points " + str(len(points_old)))
-    print("New points " + str(len(points_new)))
+    #print("Old points " + str(len(points_old)))
+    #print("New points " + str(len(points_new)))
 
     for i in range(len(points_new)):
         x_init = points_old[i, 0]
@@ -82,7 +82,7 @@ def draw_optical_flow_field(gray_image, points_old, points_new, flow, dt):
         cv2.line(color_img, (x_init, y_init), (x_end, y_end), color_red, linewidth)
 
     cv2.namedWindow('Optical Flow', cv2.WINDOW_NORMAL)
-    cv2.resizeWindow('Optical Flow', (600, 600))
+    cv2.resizeWindow('Optical Flow', 600, 600)
     cv2.imshow('Optical Flow', color_img)
     cv2.waitKey(10)
 
@@ -95,11 +95,11 @@ class OFCalculator:
     def __init__(self, param):
 
         ########## IMPORTANT PARAMETERS: ##########
-	self.image_sub_name = "front/image_raw"
-	self.num_ext_features = 250 
-	self.num_cen_features = 100
-	self.min_feat_threshold = 1.0
-	###########################################
+    	self.image_sub_name = "/camera/color/image_raw"
+    	self.num_ext_features = 250 
+    	self.num_cen_features = 100
+    	self.min_feat_threshold = 1.0
+    	###########################################
         # Initialize Image acquisition
         self.bridge = CvBridge()
         # Verbose
@@ -140,7 +140,7 @@ class OFCalculator:
 
     def callback(self, data):
 
-        rospy.loginfo(rospy.get_caller_id() + "ok1")
+        rospy.loginfo(rospy.get_caller_id())
         try:
             curr_image = self.bridge.imgmsg_to_cv2(data, "mono8")
         except CvBridgeError as e:
@@ -214,7 +214,7 @@ class OFCalculator:
             # Select good points
             good_kps_new = tracked_features[status == 1]
             good_kps_old = self.prev_kps[status == 1]
-	    print("len matches "+ str(len(good_kps_new)))
+	    #print("len matches "+ str(len(good_kps_new)))
 
             if len(good_kps_new) < self.min_feat_threshold*np.size(self.prev_kps):
                 self.tracking = False
@@ -222,38 +222,35 @@ class OFCalculator:
             elif np.size(good_kps_new) <= self.min_num_features:
 		 self.tracking = False
                  self.prev_kps = np.array([], dtype='f')
-	    else:
-		 # Get time between images
-		dt = curr_time - self.prev_time
+	    # Get time between images
+	    dt = curr_time - self.prev_time
 
-		 # Calculate flow field
-		flow = good_kps_new - good_kps_old
-		 # print("Flow: " + str(flow))
-		 # Draw the flow field
-		if self.show == 1:
-		 	draw_optical_flow_field(curr_image, good_kps_old, good_kps_new, flow, dt)
-			
-		# Publish Optical Flow data to rostopic
-		msg = OpticalFlow()
-		msg.header.stamp.secs = secs
-		msg.header.stamp.nsecs = nsecs
+            # Calculate flow field
+	    flow = good_kps_new - good_kps_old
+	    # print("Flow: " + str(flow))
+	    # Draw the flow field
+	    if self.show == 1:
+		draw_optical_flow_field(curr_image, good_kps_old, good_kps_new, flow, dt)
+	    # Publish Optical Flow data to rostopic
+	    msg = OpticalFlow()
+	    msg.header.stamp.secs = secs
+	    msg.header.stamp.nsecs = nsecs
 
-		msg.height = data.height
-		msg.width = data.width
+	    msg.height = data.height
+	    msg.width = data.width
 
-		msg.dt = dt  # in msec
-		msg.x = good_kps_old[:, 0]
-		msg.y = good_kps_old[:, 1]
-		msg.vx = flow[:, 0] / dt
-		msg.vy = flow[:, 1] / dt
-		self.optic_flow_pub.publish(msg)
+	    msg.dt = dt  # in msec
+	    msg.x = good_kps_old[:, 0]
+	    msg.y = good_kps_old[:, 1]
+	    msg.vx = flow[:, 0] / dt
+	    msg.vy = flow[:, 1] / dt
+	    self.optic_flow_pub.publish(msg)
 
-		self.prev_image = curr_image
-		self.prev_kps = np.float32(good_kps_new.reshape(-1, 1, 2))
-		self.prev_time = curr_time
+	    self.prev_image = curr_image
+	    self.prev_kps = np.float32(good_kps_new.reshape(-1, 1, 2))
+	    self.prev_time = curr_time
 
         else:
-		
 	    print("new keyframe!")
             # creating ROI
             self.roi_el = curr_image[y_init_el:y_end_el, x_init_el:x_end_l]

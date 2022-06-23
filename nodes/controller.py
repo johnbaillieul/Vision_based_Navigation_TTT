@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import rospy
 from geometry_msgs.msg import Twist
-from Vision_based_Navigation_TTT.msg import TauComputation
+from vision_based_navigation_ttt.msg import TauComputation
 import numpy as np
 import time
 import sys
@@ -141,7 +141,7 @@ class Controller:
         # Boot phase performs only in the first sense phase to allow the stabilization of the OF values
         if self.init_cnt < self.max_init:
             msg = Twist()
-            msg.linear.x = float(1)
+            msg.linear.x = float(0.5)
             msg.angular.z = float(0)
             self.steering_signal.publish(msg)
             self.init_cnt += 1
@@ -158,7 +158,7 @@ class Controller:
 
                 # Go straight
                 msg = Twist()
-                msg.linear.x = float(1)
+                msg.linear.x = float(0.5)
                 msg.angular.z = float(0)
                 self.steering_signal.publish(msg)
 
@@ -309,7 +309,7 @@ class Controller:
                             else:                                                         # The obstacle is a wall
                                                                                           # belonging to a turn
                                 self.kp = 1
-                                self.kp_e = 1.3
+                                self.kp_e = 1.2
                                 control = self.kp_e * control_e + self.kp * control_m
                                 print('\033[1m'+"Turn ahead"+'\033[0m')
                                 print("Diff Extreme: " + str(self.tau_diff_extreme))
@@ -413,7 +413,7 @@ class Controller:
 
                 # Publish Steering signal
                 msg = Twist()
-                msg.linear.x = float(1)
+                msg.linear.x = float(0.5)
                 msg.angular.z = float(control)
 
                 self.steering_signal.publish(msg)

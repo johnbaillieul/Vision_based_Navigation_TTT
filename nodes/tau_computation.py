@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 import rospy
 from geometry_msgs.msg import Twist
-from Vision_based_Navigation_TTT.msg import OpticalFlow
-from Vision_based_Navigation_TTT.msg import TauComputation
+from vision_based_navigation_ttt.msg import OpticalFlow
+from vision_based_navigation_ttt.msg import TauComputation
 from sensor_msgs.msg import Image
 import numpy as np
 from cv_bridge import CvBridgeError, CvBridge
@@ -49,18 +49,18 @@ def set_limit(img_width, img_height):
     global x_end_el
     global y_end_el
     x_init_el = 0
-    y_init_el = 0
+    y_init_el = int(2 * img_height / 12)
     x_end_el = int(3 * img_width / 12)
-    y_end_el = int(7.5 * img_height / 12)
+    y_end_el = int(12 * img_height / 12)
 
     global x_init_er
     global y_init_er
     global x_end_er
     global y_end_er
     x_init_er = int(9 * img_width / 12)
-    y_init_er = 0
+    y_init_er = int(2 * img_height / 12)
     x_end_er = int(img_width)
-    y_end_er = int(7.5 * img_height / 12)
+    y_end_er = int(12 * img_height / 12)
 
     # Left and right
     global x_init_l
@@ -68,18 +68,18 @@ def set_limit(img_width, img_height):
     global x_end_l
     global y_end_l
     x_init_l = int(3 * img_width / 12)
-    y_init_l = int(1 * img_height / 12)
+    y_init_l = int(3 * img_height / 12)
     x_end_l = int(5 * img_width / 12)
-    y_end_l = int(7 * img_height / 12)
+    y_end_l = int(9.5 * img_height / 12)
 
     global x_init_r
     global y_init_r
     global x_end_r
     global y_end_r
     x_init_r = int(7 * img_width / 12)
-    y_init_r = int(1 * img_height / 12)
+    y_init_r = int(3 * img_height / 12)
     x_end_r = int(9 * img_width / 12)
-    y_end_r = int(7 * img_height / 12)
+    y_end_r = int(9.5 * img_height / 12)
 
     # Centre
     global x_init_c
@@ -154,7 +154,7 @@ def draw_image_segmentation(curr_image, tau_el, tau_er, tau_l, tau_r, tau_c):
                 font, 1, (0, 0, 255), 2, cv2.LINE_AA)
 
     cv2.namedWindow('ROIs Representation', cv2.WINDOW_NORMAL)
-    cv2.resizeWindow('ROIs Representation', (600, 600))
+    cv2.resizeWindow('ROIs Representation', 600, 600)
     cv2.imshow('ROIs Representation', color_image)
     cv2.waitKey(10)
 
@@ -168,7 +168,7 @@ class TauComputationClass:
         ######## IMPORTANT PARAMETERS: ########
         # Minimum number of features needed to compute the average TTT for each ROI
         self.min_TTT_number = 10
-        self.image_sub_name = "front/image_raw"
+        self.image_sub_name = "/camera/color/image_raw"
         #######################################
 
         # First time that the callback is called
