@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 # Import all libraries we will use
 import random
 import numpy as np
