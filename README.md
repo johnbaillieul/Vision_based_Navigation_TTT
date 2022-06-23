@@ -99,9 +99,9 @@ material BernoulliMix/<X>
  
  ### Launch the Simulation
  1. Launch the file **jackal_world.launch**. It is possible to simulate the desired world by substituting the default world with the desired one in the launch file at this line: 
-*arg name="world_name" value="$(find Vision_based_Navigation_TTT)/GazeboWorlds/<desired .world file>"/*. 
-The jackal robot model has a lot of different sensors but for our purposes the only needed is the monocular camera. The robot model, with the monocular camera mounted on it, can be obtained in the simulation environment by using the following command: `roslaunch Vision_based_Navigation_TTT jackal_world.launch config:=front_flea3`.
- 2. Run the **optical_flow.py**, **tau_computation.py** and the **controller.py** nodes by using the following command: `rosrun Vision_based_Navigation_TTT <name of the node>`.
+*arg name="world_name" value="$(find vision_based_navigation_ttt)/GazeboWorlds/<desired .world file>"/*. 
+The jackal robot model has a lot of different sensors but for our purposes the only needed is the monocular camera. The robot model, with the monocular camera mounted on it, can be obtained in the simulation environment by using the following command: `roslaunch vision_based_navigation_ttt jackal_world.launch config:=front_flea3`.
+ 2. Run the **optical_flow.py**, **tau_computation.py** and the **controller.py** nodes by using the following command: `rosrun vision_based_navigation_ttt <name of the node>`.
       
  ### Known Issues with ROS Noetic and Ubuntu 20.04:
 
