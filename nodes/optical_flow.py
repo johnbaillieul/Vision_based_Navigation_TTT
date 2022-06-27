@@ -199,59 +199,14 @@ class OFCalculator:
             if np.size(keypoints) > 0:
                 p0 = cv2.KeyPoint_convert(keypoints)
                 self.prev_kps = np.float32(p0.reshape(-1, 1, 2))
-		self.tracking = True
+                self.tracking = True
             else:
                 self.prev_kps = np.array([], dtype='f')
                 print("Features detected: 0")
             return
 
-        if self.tracking:
-
-            tracked_features, status, error = cv2.calcOpticalFlowPyrLK(self.prev_image, curr_image,
-                                                                       self.prev_kps, None,
-                                                                       **self.lk_params)
-
-            # Select good points
-            good_kps_new = tracked_features[status == 1]
-            good_kps_old = self.prev_kps[status == 1]
-	    #print("len matches "+ str(len(good_kps_new)))
-
-            if len(good_kps_new) < self.min_feat_threshold*np.size(self.prev_kps):
-                self.tracking = False
-		self.prev_kps = np.array([], dtype='f')
-            elif np.size(good_kps_new) <= self.min_num_features:
-		 self.tracking = False
-                 self.prev_kps = np.array([], dtype='f')
-	    # Get time between images
-	    dt = curr_time - self.prev_time
-
-            # Calculate flow field
-	    flow = good_kps_new - good_kps_old
-	    # print("Flow: " + str(flow))
-	    # Draw the flow field
-	    if self.show == 1:
-		draw_optical_flow_field(curr_image, good_kps_old, good_kps_new, flow, dt)
-	    # Publish Optical Flow data to rostopic
-	    msg = OpticalFlow()
-	    msg.header.stamp.secs = secs
-	    msg.header.stamp.nsecs = nsecs
-
-	    msg.height = data.height
-	    msg.width = data.width
-
-	    msg.dt = dt  # in msec
-	    msg.x = good_kps_old[:, 0]
-	    msg.y = good_kps_old[:, 1]
-	    msg.vx = flow[:, 0] / dt
-	    msg.vy = flow[:, 1] / dt
-	    self.optic_flow_pub.publish(msg)
-
-	    self.prev_image = curr_image
-	    self.prev_kps = np.float32(good_kps_new.reshape(-1, 1, 2))
-	    self.prev_time = curr_time
-
-        else:
-	    print("new keyframe!")
+        if self.tracking is False:
+            print("new keyframe!")
             # creating ROI
             self.roi_el = curr_image[y_init_el:y_end_el, x_init_el:x_end_l]
             self.roi_er = curr_image[y_init_er:y_end_er, x_init_r:x_end_er]
@@ -292,10 +247,53 @@ class OFCalculator:
             if np.size(keypoints) > 0:
                 p0 = cv2.KeyPoint_convert(keypoints)
                 self.prev_kps = np.float32(p0.reshape(-1, 1, 2))
-		self.tracking = True
+                self.tracking = True
             else:
                 self.prev_kps = np.array([], dtype='f')
                 print("Features detected: 0")
+                
+        tracked_features, status, error = cv2.calcOpticalFlowPyrLK(self.prev_image, curr_image,
+                                                                   self.prev_kps, None,
+                                                                   **self.lk_params)
+
+        # Select good points
+        good_kps_new = tracked_features[status == 1]
+        good_kps_old = self.prev_kps[status == 1]
+        #print("len matches "+ str(len(good_kps_new)))
+
+        if np.size(good_kps_new) < self.min_feat_threshold*np.size(self.prev_kps):
+            self.tracking = False
+            self.prev_kps = np.array([], dtype='f')
+        elif np.size(good_kps_new) == 0:
+            self.tracking = False
+            self.prev_kps = np.array([], dtype='f')
+            return
+        else:
+            self.prev_kps = np.float32(good_kps_new.reshape(-1, 1, 2))
+            
+        # Get time between images
+        dt = curr_time - self.prev_time
+
+        # Calculate flow field
+        flow = good_kps_new - good_kps_old
+        # print("Flow: " + str(flow))
+        # Draw the flow field
+        if self.show == 1:
+            draw_optical_flow_field(curr_image, good_kps_old, good_kps_new, flow, dt)
+            # Publish Optical Flow data to rostopic
+        msg = OpticalFlow()
+        msg.header.stamp.secs = secs
+        msg.header.stamp.nsecs = nsecs
+    
+        msg.height = data.height
+        msg.width = data.width
+    
+        msg.dt = dt  # in msec
+        msg.x = good_kps_old[:, 0]
+        msg.y = good_kps_old[:, 1]
+        msg.vx = flow[:, 0] / dt
+        msg.vy = flow[:, 1] / dt
+        self.optic_flow_pub.publish(msg)
 
         self.prev_image = curr_image
         self.prev_time = curr_time
