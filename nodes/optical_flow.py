@@ -264,10 +264,9 @@ class OFCalculator:
         if np.size(good_kps_new) < self.min_feat_threshold*np.size(self.prev_kps):
             self.tracking = False
             self.prev_kps = np.array([], dtype='f')
-        elif np.size(good_kps_new) == 0:
+        elif np.size(good_kps_new) <= self.min_num_features:
             self.tracking = False
             self.prev_kps = np.array([], dtype='f')
-            return
         else:
             self.prev_kps = np.float32(good_kps_new.reshape(-1, 1, 2))
             
