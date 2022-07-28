@@ -97,16 +97,20 @@ material BernoulliMix/<X>
  ```
  ![Features density](assets/FeaturesDensity.png)
  
- ### Launch the Simulation
+### Launch the Simulation
  1. Launch the file **jackal_world.launch**. It is possible to simulate the desired world by substituting the default world with the desired one in the launch file at this line: 
 *arg name="world_name" value="$(find vision_based_navigation_ttt)/GazeboWorlds/<desired .world file>"/*. 
 The jackal robot model has a lot of different sensors but for our purposes the only needed is the monocular camera. The robot model, with the monocular camera mounted on it, can be obtained in the simulation environment by using the following command: `roslaunch vision_based_navigation_ttt jackal_world.launch config:=front_flea3`.
  2. Run the **optical_flow.py**, **tau_computation.py** and the **controller.py** nodes by using the following command: `rosrun vision_based_navigation_ttt <name of the node>`.
+ 3. To reset the simulation to its starting state run the following command: `rosservice call /gazebo/reset_simulation "{}"`
       
- ### Known Issues with ROS Noetic and Ubuntu 20.04:
+### Notes to use with ROS Noetic and Ubuntu 20.04:
 
 Because ROS Noetic mainly features Python 3, which is a major shift from Python 2 in ROS Melodic and Ubuntu 18.04, there may be a problem related to Python 3 not tolerating mixing of tabs and spaces in Python source code.  Errors of the following form may occur:
 
 `-->TabError: inconsistent use of tabs and spaces in indentation`
       
-We are working on a solution to guarantee full support for ROS Noetic.
+The following problem above should now be resolved. However, some editors still have some language interpretation issues with the tabs and spaces but your mileage may vary. Confirmed works on fresh 20.04 installations.
+
+NOTE: Need to change /opt/ros/noetic/share/jackal_description/urdf/accessories.urdf.xacro JACKAL_FLEA3_TILT to smaller angle
+with sudo permissions if installed jackal_description through apt repo

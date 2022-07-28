@@ -10,7 +10,7 @@
  
   <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
-    <arg name="world_name" value="$(find vision_based_navigation_ttt)/GazeboWorlds/corridor.world"/>
+    <arg name="world_name" value="$(find vision_based_navigation_ttt)/GazeboWorlds/corridor_L.world"/>
     <!-- more default parameters can be changed here -->
   </include>
 
@@ -20,8 +20,8 @@
 
   <!-- Spawn Jackal -->
   <include file="$(find vision_based_navigation_ttt)/launch/spawn_jackal.launch">
-    <arg name="x" value="0" />
-    <arg name="y" value="0" />
+    <arg name="x" value="-10" />
+    <arg name="y" value="7.25" />
     <arg name="z" value="1.0" />
     <arg name="yaw" value="0" />
     <arg name="config" value="$(arg config)" />

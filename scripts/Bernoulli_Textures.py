@@ -24,8 +24,8 @@ def create_image(p):
                 if shape < 1.0:
                     cv2.circle(img, (wcount, hcount), int(diameter/2), [0, 0, 0], -1)
                 elif shape < 2.0:
-                    cv2.rectangle(img, (wcount - x_correction, hcount - y_correction), (wcount + x_correction, hcount +
-                                                                                        y_correction), [0, 0, 0], -1)
+                    cv2.rectangle(img, (wcount - x_correction, hcount - y_correction),
+                                 (wcount + x_correction, hcount + y_correction), [0, 0, 0], -1)
                 else:
                     pt1 = (wcount, hcount-y_correction)
                     pt2 = (wcount-x_correction, hcount+y_correction)
