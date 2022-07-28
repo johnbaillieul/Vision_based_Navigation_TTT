@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+
+<launch>
+        <!-- overwriting these args -->
+        <arg name="debug" default="false" />
+        <arg name="gui" default="true" />
+        <arg name="pause" default="false" />
+        <arg name="world" default="$(find vision_based_navigation_ttt)/GazeboWorlds/realistic_world_succ.world" />
+        <arg name="extra_gazebo_args" default="--verbose"/>
+
+        <!-- include gazebo_ros launcher -->
+        <include file="$(find gazebo_ros)/launch/empty_world.launch">
+                <arg name="world_name" value="$(arg world)" />
+                <arg name="debug" value="$(arg debug)" />
+                <arg name="gui" value="$(arg gui)" />
+                <arg name="paused" value="$(arg pause)" />
+                <arg name="use_sim_time" value="true" />
+                <arg name="extra_gazebo_args" value="$(arg extra_gazebo_args)"/>
+        </include>
+
+        <!-- Configuration of Jackal which you would like to simulate.
+        See jackal_description for details. -->
+        
+         <!-- Spawn Jackal-->
+        <include file="$(find vision_based_navigation_ttt)/launch/spawn_jackal.launch">
+                <arg name="x" value="5" />
+                <arg name="y" value="-1.7" />
+                <arg name="z" value="1.0" />
+                <arg name="yaw" value="3.14" />
+        </include> 
+
+        <!--directly run all three nodes
+        <include file="$(find vision_based_navigation_ttt)/launch/optical_flow_nodes.launch">
+        </include>-->
+</launch>       

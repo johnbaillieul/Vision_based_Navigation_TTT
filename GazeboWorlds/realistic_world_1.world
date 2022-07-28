@@ -1276,7 +1276,7 @@
           <geometry>
             <mesh>
               <scale>1 1 1</scale>
-              <uri>/opt/ros/melodic/share/jackal_description/meshes/jackal-base.stl</uri>
+              <uri>/opt/ros/noetic/share/jackal_description/meshes/jackal-base.stl</uri>
             </mesh>
           </geometry>
           <material>
@@ -1291,7 +1291,7 @@
           <geometry>
             <mesh>
               <scale>1 1 1</scale>
-              <uri>/opt/ros/melodic/share/jackal_description/meshes/jackal-fender.stl</uri>
+              <uri>/opt/ros/noetic/share/jackal_description/meshes/jackal-fender.stl</uri>
             </mesh>
           </geometry>
           <material>
@@ -1306,7 +1306,7 @@
           <geometry>
             <mesh>
               <scale>1 1 1</scale>
-              <uri>/opt/ros/melodic/share/realsense2_description/meshes/d435.dae</uri>
+              <uri>/opt/ros/noetic/share/realsense2_description/meshes/d435.dae</uri>
             </mesh>
           </geometry>
         </visual>
@@ -1330,7 +1330,7 @@
           <geometry>
             <mesh>
               <scale>1 1 1</scale>
-              <uri>/opt/ros/melodic/share/jackal_description/meshes/jackal-fender.stl</uri>
+              <uri>/opt/ros/noetic/share/jackal_description/meshes/jackal-fender.stl</uri>
             </mesh>
           </geometry>
           <material>
@@ -1441,7 +1441,7 @@
           <geometry>
             <mesh>
               <scale>1 1 1</scale>
-              <uri>/opt/ros/melodic/share/jackal_description/meshes/jackal-wheel.stl</uri>
+              <uri>/opt/ros/noetic/share/jackal_description/meshes/jackal-wheel.stl</uri>
             </mesh>
           </geometry>
           <material>
@@ -1521,7 +1521,7 @@
           <geometry>
             <mesh>
               <scale>1 1 1</scale>
-              <uri>/opt/ros/melodic/share/jackal_description/meshes/jackal-wheel.stl</uri>
+              <uri>/opt/ros/noetic/share/jackal_description/meshes/jackal-wheel.stl</uri>
             </mesh>
           </geometry>
           <material>
@@ -1601,7 +1601,7 @@
           <geometry>
             <mesh>
               <scale>1 1 1</scale>
-              <uri>/opt/ros/melodic/share/jackal_description/meshes/jackal-wheel.stl</uri>
+              <uri>/opt/ros/noetic/share/jackal_description/meshes/jackal-wheel.stl</uri>
             </mesh>
           </geometry>
           <material>
@@ -1681,7 +1681,7 @@
           <geometry>
             <mesh>
               <scale>1 1 1</scale>
-              <uri>/opt/ros/melodic/share/jackal_description/meshes/jackal-wheel.stl</uri>
+              <uri>/opt/ros/noetic/share/jackal_description/meshes/jackal-wheel.stl</uri>
             </mesh>
           </geometry>
           <material>
