@@ -1,0 +1,4870 @@
+<sdf version='1.6'>
+  <world name='default'>
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose frame=''>0 0 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+    <model name='ground_plane'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>65535</collide_bitmask>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <physics name='default_physics' default='0' type='ode'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>1</shadows>
+    </scene>
+    <audio>
+      <device>default</device>
+    </audio>
+    <wind/>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <model name='1_stack'>
+      <pose frame=''>0.318778 -2.25385 0 0 -0 1.5708</pose>
+      <static>1</static>
+      <link name='link_0'>
+        <collision name='collision_0'>
+          <pose frame=''>0 0 0.18 0 -0 3.14</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_0'>
+          <pose frame=''>0 0 0.18 0 -0 3.14</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_blue_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_1'>
+        <collision name='collision_1'>
+          <pose frame=''>0 0 0.54 0 -0 3.14</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_1'>
+          <pose frame=''>0 0 0.54 0 -0 3.14</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_red_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_2'>
+        <collision name='collision_2'>
+          <pose frame=''>0 0 0.9 0 -0 3.14</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_2'>
+          <pose frame=''>0 0 0.9 0 -0 3.14</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_green_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='1_stack_0'>
+      <pose frame=''>0.154167 -1.99512 0 0 -0 1.5708</pose>
+      <static>1</static>
+      <link name='link_0'>
+        <collision name='collision_0'>
+          <pose frame=''>0 0 0.18 0 -0 3.14</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_0'>
+          <pose frame=''>0 0 0.18 0 -0 3.14</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_blue_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_1'>
+        <collision name='collision_1'>
+          <pose frame=''>0 0 0.54 0 -0 3.14</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_1'>
+          <pose frame=''>0 0 0.54 0 -0 3.14</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_red_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_2'>
+        <collision name='collision_2'>
+          <pose frame=''>0 0 0.9 0 -0 3.14</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_2'>
+          <pose frame=''>0 0 0.9 0 -0 3.14</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_green_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='1_stack_1'>
+      <pose frame=''>-0.401712 -1.36059 0 0 -0 1.5708</pose>
+      <static>1</static>
+      <link name='link_0'>
+        <collision name='collision_0'>
+          <pose frame=''>0 0 0.18 0 -0 3.14</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_0'>
+          <pose frame=''>0 0 0.18 0 -0 3.14</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_blue_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_1'>
+        <collision name='collision_1'>
+          <pose frame=''>0 0 0.54 0 -0 3.14</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_1'>
+          <pose frame=''>0 0 0.54 0 -0 3.14</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_red_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_2'>
+        <collision name='collision_2'>
+          <pose frame=''>0 0 0.9 0 -0 3.14</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_2'>
+          <pose frame=''>0 0 0.9 0 -0 3.14</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_green_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='1_stack_2'>
+      <pose frame=''>-0.244704 -1.82563 0 0 -0 1.5708</pose>
+      <static>1</static>
+      <link name='link_0'>
+        <collision name='collision_0'>
+          <pose frame=''>0 0 0.18 0 -0 3.14</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_0'>
+          <pose frame=''>0 0 0.18 0 -0 3.14</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_blue_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_1'>
+        <collision name='collision_1'>
+          <pose frame=''>0 0 0.54 0 -0 3.14</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_1'>
+          <pose frame=''>0 0 0.54 0 -0 3.14</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_red_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_2'>
+        <collision name='collision_2'>
+          <pose frame=''>0 0 0.9 0 -0 3.14</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_2'>
+          <pose frame=''>0 0 0.9 0 -0 3.14</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_green_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <state world_name='default'>
+      <sim_time>3217 913000000</sim_time>
+      <real_time>2695 713716915</real_time>
+      <wall_time>1658156561 329486385</wall_time>
+      <iterations>2676681</iterations>
+      <model name='1_stack'>
+        <pose frame=''>0.81666 -2.39959 0 0 0 -1.93288</pose>
+        <scale>1 1 1</scale>
+        <link name='link_0'>
+          <pose frame=''>0.81666 -2.39959 0 0 0 -1.93288</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_1'>
+          <pose frame=''>0.81666 -2.39959 0 0 0 -1.93288</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_2'>
+          <pose frame=''>0.81666 -2.39959 0 0 0 -1.93288</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='1_stack_0'>
+        <pose frame=''>0.348564 -2.15881 0.001177 0 0 -2.24214</pose>
+        <scale>1 1 1</scale>
+        <link name='link_0'>
+          <pose frame=''>0.348564 -2.15881 0.001177 0 0 -2.24214</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_1'>
+          <pose frame=''>0.348564 -2.15881 0.001177 0 0 -2.24214</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_2'>
+          <pose frame=''>0.348564 -2.15881 0.001177 0 0 -2.24214</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='1_stack_1'>
+        <pose frame=''>-0.264245 -1.33617 0 0 0 -2.80583</pose>
+        <scale>1 1 1</scale>
+        <link name='link_0'>
+          <pose frame=''>-0.264245 -1.33617 0 0 0 -2.80583</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_1'>
+          <pose frame=''>-0.264245 -1.33617 0 0 0 -2.80583</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_2'>
+          <pose frame=''>-0.264245 -1.33617 0 0 0 -2.80583</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='1_stack_2'>
+        <pose frame=''>-0.013512 -1.78211 0 0 0 -2.4998</pose>
+        <scale>1 1 1</scale>
+        <link name='link_0'>
+          <pose frame=''>-0.013512 -1.78211 0 0 0 -2.4998</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_1'>
+          <pose frame=''>-0.013512 -1.78211 0 0 0 -2.4998</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_2'>
+          <pose frame=''>-0.013512 -1.78211 0 0 0 -2.4998</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='1_stack_3'>
+        <pose frame=''>1.79442 -2.56052 0 0 0 -1.55533</pose>
+        <scale>1 1 1</scale>
+        <link name='link_0'>
+          <pose frame=''>1.79442 -2.56052 0 0 0 -1.55533</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_1'>
+          <pose frame=''>1.79442 -2.56052 0 0 0 -1.55533</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_2'>
+          <pose frame=''>1.79442 -2.56052 0 0 0 -1.55533</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='1_stack_4'>
+        <pose frame=''>1.31613 -2.51212 0 0 -0 -1.64426</pose>
+        <scale>1 1 1</scale>
+        <link name='link_0'>
+          <pose frame=''>1.31613 -2.51212 0 0 -0 -1.64426</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_1'>
+          <pose frame=''>1.31613 -2.51212 0 0 -0 -1.64426</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_2'>
+          <pose frame=''>1.31613 -2.51212 0 0 -0 -1.64426</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='1_stack_5'>
+        <pose frame=''>-0.390074 -0.851205 0 0 -0 -3.024</pose>
+        <scale>1 1 1</scale>
+        <link name='link_0'>
+          <pose frame=''>-0.390074 -0.851205 0 0 -0 -3.024</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_1'>
+          <pose frame=''>-0.390074 -0.851205 0 0 -0 -3.024</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_2'>
+          <pose frame=''>-0.390074 -0.851205 0 0 -0 -3.024</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='1_stack_6'>
+        <pose frame=''>-0.446535 0.107041 0 0 -0 -3.12974</pose>
+        <scale>1 1 1</scale>
+        <link name='link_0'>
+          <pose frame=''>-0.446535 0.107041 0 0 -0 -3.12974</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_1'>
+          <pose frame=''>-0.446535 0.107041 0 0 -0 -3.12974</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_2'>
+          <pose frame=''>-0.446535 0.107041 0 0 -0 -3.12974</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='1_stack_7'>
+        <pose frame=''>-0.433299 -0.361355 0 0 -0 -3.09617</pose>
+        <scale>1 1 1</scale>
+        <link name='link_0'>
+          <pose frame=''>-0.433299 -0.361355 0 0 -0 -3.09617</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_1'>
+          <pose frame=''>-0.433299 -0.361355 0 0 -0 -3.09617</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_2'>
+          <pose frame=''>-0.433299 -0.361355 0 0 -0 -3.09617</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='ground_plane'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='jackal'>
+        <pose frame=''>4.90213 -1.32503 0.063497 0 -0 -3.10761</pose>
+        <scale>1 1 1</scale>
+        <link name='base_link'>
+          <pose frame=''>4.90213 -1.32503 0.063497 0 -0 -3.10761</pose>
+          <velocity>-0.000157 -7e-06 1e-05 -3e-06 1.3e-05 1.2e-05</velocity>
+          <acceleration>-0 -0 -0 0 -0 0</acceleration>
+          <wrench>-4e-06 -0 -0 0 -0 0</wrench>
+        </link>
+        <link name='front_left_wheel_link'>
+          <pose frame=''>4.77758 -1.51717 0.097997 -3.12762 1.57024 0.047956</pose>
+          <velocity>-0.000154 -8e-06 0 3e-06 1.1e-05 1.2e-05</velocity>
+          <acceleration>-0 -0 -0 0 -0 0</acceleration>
+          <wrench>-0 -0 -0 0 -0 0</wrench>
+        </link>
+        <link name='front_right_wheel_link'>
+          <pose frame=''>4.76482 -1.14179 0.097997 -3.08137 -1.57075 -0.02624</pose>
+          <velocity>-0.000158 -8e-06 0 1.6e-05 1.3e-05 1.2e-05</velocity>
+          <acceleration>-0 -0 0 0 -0 0</acceleration>
+          <wrench>-0 -0 0 0 -0 0</wrench>
+        </link>
+        <link name='rear_left_wheel_link'>
+          <pose frame=''>5.03943 -1.50826 0.097998 -3.12657 -1.57034 0.018964</pose>
+          <velocity>-0.000154 -5e-06 0 1.5e-05 2.2e-05 1.2e-05</velocity>
+          <acceleration>-0 -0 0 -0 -0 -0</acceleration>
+          <wrench>-0 -0 0 0 -0 0</wrench>
+        </link>
+        <link name='rear_right_wheel_link'>
+          <pose frame=''>5.02667 -1.13289 0.097998 -0.002285 1.5692 -3.1099</pose>
+          <velocity>-0.000159 -5e-06 0 2e-06 1.6e-05 1.2e-05</velocity>
+          <acceleration>-0 -0 -0 0 -0 0</acceleration>
+          <wrench>-0 -0 -0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='realistic_curve_side1'>
+        <pose frame=''>4.68185 -0.326887 0 0 -0 1.5708</pose>
+        <scale>1 1 1</scale>
+        <link name='link_0'>
+          <pose frame=''>4.68185 -0.326887 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_1'>
+          <pose frame=''>4.68185 -0.326887 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_10'>
+          <pose frame=''>4.68185 -0.326887 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_11'>
+          <pose frame=''>4.68185 -0.326887 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_12'>
+          <pose frame=''>4.68185 -0.326887 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_13'>
+          <pose frame=''>4.68185 -0.326887 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_14'>
+          <pose frame=''>4.68185 -0.326887 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_15'>
+          <pose frame=''>4.68185 -0.326887 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_16'>
+          <pose frame=''>4.68185 -0.326887 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_17'>
+          <pose frame=''>4.68185 -0.326887 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_18'>
+          <pose frame=''>4.68185 -0.326887 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_19'>
+          <pose frame=''>4.68185 -0.326887 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_2'>
+          <pose frame=''>4.68185 -0.326887 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_20'>
+          <pose frame=''>4.68185 -0.326887 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_21'>
+          <pose frame=''>4.68185 -0.326887 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_22'>
+          <pose frame=''>4.68185 -0.326887 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_23'>
+          <pose frame=''>4.68185 -0.326887 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_24'>
+          <pose frame=''>4.68185 -0.326887 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_25'>
+          <pose frame=''>4.68185 -0.326887 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_26'>
+          <pose frame=''>4.68185 -0.326887 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_27'>
+          <pose frame=''>4.68185 -0.326887 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_28'>
+          <pose frame=''>4.68185 -0.326887 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_29'>
+          <pose frame=''>4.68185 -0.326887 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_3'>
+          <pose frame=''>4.68185 -0.326887 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_30'>
+          <pose frame=''>4.68185 -0.326887 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_31'>
+          <pose frame=''>4.68185 -0.326887 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_32'>
+          <pose frame=''>4.68185 -0.326887 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_33'>
+          <pose frame=''>4.68185 -0.326887 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_34'>
+          <pose frame=''>4.68185 -0.326887 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_35'>
+          <pose frame=''>4.68185 -0.326887 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_36'>
+          <pose frame=''>4.68185 -0.326887 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_37'>
+          <pose frame=''>4.68185 -0.326887 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_38'>
+          <pose frame=''>4.68185 -0.326887 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_4'>
+          <pose frame=''>4.68185 -0.326887 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_5'>
+          <pose frame=''>4.68185 -0.326887 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_6'>
+          <pose frame=''>4.68185 -0.326887 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_7'>
+          <pose frame=''>4.68185 -0.326887 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_8'>
+          <pose frame=''>4.68185 -0.326887 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_9'>
+          <pose frame=''>4.68185 -0.326887 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='realistic_curve_side2_1'>
+        <pose frame=''>4.58227 -1.26122 0 0 -0 1.5708</pose>
+        <scale>1 1 1</scale>
+        <link name='link_0_0'>
+          <pose frame=''>4.58227 -1.26122 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_10_0'>
+          <pose frame=''>4.58227 -1.26122 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_11_0'>
+          <pose frame=''>4.58227 -1.26122 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_12_0'>
+          <pose frame=''>4.58227 -1.26122 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_13_0'>
+          <pose frame=''>4.58227 -1.26122 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_14_0'>
+          <pose frame=''>4.58227 -1.26122 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_15_0'>
+          <pose frame=''>4.58227 -1.26122 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_16_0'>
+          <pose frame=''>4.58227 -1.26122 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_17_0'>
+          <pose frame=''>4.58227 -1.26122 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_1_0'>
+          <pose frame=''>4.58227 -1.26122 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_2_0'>
+          <pose frame=''>4.58227 -1.26122 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_3_0'>
+          <pose frame=''>4.58227 -1.26122 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_4_0'>
+          <pose frame=''>4.58227 -1.26122 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_5_0'>
+          <pose frame=''>4.58227 -1.26122 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_6_0'>
+          <pose frame=''>4.58227 -1.26122 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_7_0'>
+          <pose frame=''>4.58227 -1.26122 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_8_0'>
+          <pose frame=''>4.58227 -1.26122 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_9_0'>
+          <pose frame=''>4.58227 -1.26122 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='realistic_curve_side2_2'>
+        <pose frame=''>3.98422 0.137948 0 0 -0 1.5708</pose>
+        <scale>1 1 1</scale>
+        <link name='link_18_0'>
+          <pose frame=''>3.98422 0.137948 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_19_0'>
+          <pose frame=''>3.98422 0.137948 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_20_0'>
+          <pose frame=''>3.98422 0.137948 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_21_0'>
+          <pose frame=''>3.98422 0.137948 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_22_0'>
+          <pose frame=''>3.98422 0.137948 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_23_0'>
+          <pose frame=''>3.98422 0.137948 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_24_0'>
+          <pose frame=''>3.98422 0.137948 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_25_0'>
+          <pose frame=''>3.98422 0.137948 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_26_0'>
+          <pose frame=''>3.98422 0.137948 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_27_0'>
+          <pose frame=''>3.98422 0.137948 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_28_0'>
+          <pose frame=''>3.98422 0.137948 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_29_0'>
+          <pose frame=''>3.98422 0.137948 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_30_0'>
+          <pose frame=''>3.98422 0.137948 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_31_0'>
+          <pose frame=''>3.98422 0.137948 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_32_0'>
+          <pose frame=''>3.98422 0.137948 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_33_0'>
+          <pose frame=''>3.98422 0.137948 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_34_0'>
+          <pose frame=''>3.98422 0.137948 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='link_35_0'>
+          <pose frame=''>3.98422 0.137948 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <light name='sun'>
+        <pose frame=''>0 0 10 0 -0 0</pose>
+      </light>
+      <light name='user_point_light_0'>
+        <pose frame=''>2.52026 -1.84293 1 0 -0 0</pose>
+      </light>
+      <light name='user_point_light_1'>
+        <pose frame=''>0.671486 1.188 1 0 -0 0</pose>
+      </light>
+    </state>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose frame=''>11.184 -5.18456 25.2233 0 1.0698 2.99139</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+    <model name='jackal'>
+      <link name='base_link'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose frame=''>0.011999 0.002 0.066996 0 -0 0</pose>
+          <mass>16.524</mass>
+          <inertia>
+            <ixx>0.313604</ixx>
+            <ixy>-0.000800024</ixy>
+            <ixz>0.0163992</ixz>
+            <iyy>0.392205</iyy>
+            <iyz>-0.000900134</iyz>
+            <izz>0.4485</izz>
+          </inertia>
+        </inertial>
+        <collision name='base_link_fixed_joint_lump__chassis_link_collision'>
+          <pose frame=''>0 0 0.092 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.42 0.31 0.184</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='base_link_fixed_joint_lump__chassis_link_visual'>
+          <pose frame=''>0 0 -0.0655 1.5708 -0 1.5708</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/opt/ros/melodic/share/jackal_description/meshes/jackal-base.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/DarkGrey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__front_fender_link_visual_1'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/opt/ros/melodic/share/jackal_description/meshes/jackal-fender.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Yellow</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__front_realsense_lens_visual_2'>
+          <pose frame=''>-0.04 0 0.414 1.5708 -0 1.5708</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/opt/ros/melodic/share/realsense2_description/meshes/d435.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__navsat_link_visual_3'>
+          <pose frame=''>-0.18 0.126 0.1895 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.016</length>
+              <radius>0.026</radius>
+            </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/DarkGrey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__rear_fender_link_visual_4'>
+          <pose frame=''>0 0 0 0 -0 -3.14159</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/opt/ros/melodic/share/jackal_description/meshes/jackal-fender.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Yellow</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <velocity_decay/>
+        <velocity_decay/>
+        <velocity_decay/>
+        <velocity_decay/>
+        <velocity_decay/>
+        <sensor name='front_realsense_depth' type='depth'>
+          <update_rate>30</update_rate>
+          <camera name='__default__'>
+            <horizontal_fov>1.51844</horizontal_fov>
+            <image>
+              <width>1280</width>
+              <height>720</height>
+              <format>RGB8</format>
+            </image>
+            <clip>
+              <near>0.01</near>
+              <far>50</far>
+            </clip>
+          </camera>
+          <plugin name='kinect_controller' filename='libgazebo_ros_openni_kinect.so'>
+            <baseline>0.2</baseline>
+            <alwaysOn>1</alwaysOn>
+            <updateRate>30</updateRate>
+            <cameraName>realsense</cameraName>
+            <imageTopicName>color/image_raw</imageTopicName>
+            <cameraInfoTopicName>color/camera_info</cameraInfoTopicName>
+            <depthImageTopicName>depth/image_rect_raw</depthImageTopicName>
+            <depthImageInfoTopicName>depth/camera_info</depthImageInfoTopicName>
+            <pointCloudTopicName>depth/color/points</pointCloudTopicName>
+            <frameName>front_realsense_gazebo</frameName>
+            <pointCloudCutoff>0.105</pointCloudCutoff>
+            <pointCloudCutoffMax>8.0</pointCloudCutoffMax>
+            <distortionK1>0.00000001</distortionK1>
+            <distortionK2>0.00000001</distortionK2>
+            <distortionK3>0.00000001</distortionK3>
+            <distortionT1>0.00000001</distortionT1>
+            <distortionT2>0.00000001</distortionT2>
+            <CxPrime>0</CxPrime>
+            <Cx>0</Cx>
+            <Cy>0</Cy>
+            <focalLength>0</focalLength>
+            <hackBaseline>0</hackBaseline>
+            <robotNamespace>/</robotNamespace>
+          </plugin>
+          <pose frame=''>-0.035 0 0.414 0 -0 0</pose>
+        </sensor>
+        <velocity_decay/>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='front_left_wheel_link'>
+        <pose frame=''>0.131 0.187795 0.0345 0 -0 0</pose>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <mass>0.477</mass>
+          <inertia>
+            <ixx>0.0013</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.0024</iyy>
+            <iyz>0</iyz>
+            <izz>0.0013</izz>
+          </inertia>
+        </inertial>
+        <collision name='front_left_wheel_link_collision'>
+          <pose frame=''>0 0 0 1.5708 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.04</length>
+              <radius>0.098</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode>
+                <kp>1e+07</kp>
+                <kd>1</kd>
+              </ode>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.5</mu>
+                <mu2>0.5</mu2>
+                <fdir1>1 0 0</fdir1>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='front_left_wheel_link_visual'>
+          <pose frame=''>0 0 0 1.5708 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/opt/ros/melodic/share/jackal_description/meshes/jackal-wheel.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/DarkGrey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='front_left_wheel' type='revolute'>
+        <child>front_left_wheel_link</child>
+        <parent>base_link</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='front_right_wheel_link'>
+        <pose frame=''>0.131 -0.187795 0.0345 0 -0 0</pose>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <mass>0.477</mass>
+          <inertia>
+            <ixx>0.0013</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.0024</iyy>
+            <iyz>0</iyz>
+            <izz>0.0013</izz>
+          </inertia>
+        </inertial>
+        <collision name='front_right_wheel_link_collision'>
+          <pose frame=''>0 0 0 1.5708 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.04</length>
+              <radius>0.098</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode>
+                <kp>1e+07</kp>
+                <kd>1</kd>
+              </ode>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.5</mu>
+                <mu2>0.5</mu2>
+                <fdir1>1 0 0</fdir1>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='front_right_wheel_link_visual'>
+          <pose frame=''>0 0 0 1.5708 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/opt/ros/melodic/share/jackal_description/meshes/jackal-wheel.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/DarkGrey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='front_right_wheel' type='revolute'>
+        <child>front_right_wheel_link</child>
+        <parent>base_link</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='rear_left_wheel_link'>
+        <pose frame=''>-0.131 0.187795 0.0345 0 -0 0</pose>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <mass>0.477</mass>
+          <inertia>
+            <ixx>0.0013</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.0024</iyy>
+            <iyz>0</iyz>
+            <izz>0.0013</izz>
+          </inertia>
+        </inertial>
+        <collision name='rear_left_wheel_link_collision'>
+          <pose frame=''>0 0 0 1.5708 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.04</length>
+              <radius>0.098</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode>
+                <kp>1e+07</kp>
+                <kd>1</kd>
+              </ode>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.5</mu>
+                <mu2>0.5</mu2>
+                <fdir1>1 0 0</fdir1>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='rear_left_wheel_link_visual'>
+          <pose frame=''>0 0 0 1.5708 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/opt/ros/melodic/share/jackal_description/meshes/jackal-wheel.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/DarkGrey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='rear_left_wheel' type='revolute'>
+        <child>rear_left_wheel_link</child>
+        <parent>base_link</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='rear_right_wheel_link'>
+        <pose frame=''>-0.131 -0.187795 0.0345 0 -0 0</pose>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <mass>0.477</mass>
+          <inertia>
+            <ixx>0.0013</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.0024</iyy>
+            <iyz>0</iyz>
+            <izz>0.0013</izz>
+          </inertia>
+        </inertial>
+        <collision name='rear_right_wheel_link_collision'>
+          <pose frame=''>0 0 0 1.5708 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.04</length>
+              <radius>0.098</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode>
+                <kp>1e+07</kp>
+                <kd>1</kd>
+              </ode>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.5</mu>
+                <mu2>0.5</mu2>
+                <fdir1>1 0 0</fdir1>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='rear_right_wheel_link_visual'>
+          <pose frame=''>0 0 0 1.5708 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/opt/ros/melodic/share/jackal_description/meshes/jackal-wheel.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/DarkGrey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='rear_right_wheel' type='revolute'>
+        <child>rear_right_wheel_link</child>
+        <parent>base_link</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <plugin name='gazebo_ros_control' filename='libgazebo_ros_control.so'>
+        <robotNamespace>/</robotNamespace>
+      </plugin>
+      <plugin name='imu_controller' filename='libhector_gazebo_ros_imu.so'>
+        <robotNamespace>/</robotNamespace>
+        <updateRate>50.0</updateRate>
+        <topicName>imu/data</topicName>
+        <accelDrift>0.005 0.005 0.005</accelDrift>
+        <accelGaussianNoise>0.005 0.005 0.005</accelGaussianNoise>
+        <rateDrift>0.005 0.005 0.005</rateDrift>
+        <rateGaussianNoise>0.005 0.005 0.005</rateGaussianNoise>
+        <headingDrift>0.005</headingDrift>
+        <headingGaussianNoise>0.005</headingGaussianNoise>
+        <bodyName>base_link</bodyName>
+        <xyzOffset>0 0 0</xyzOffset>
+        <rpyOffset>0 -0 0</rpyOffset>
+      </plugin>
+      <static>0</static>
+      <plugin name='gps_controller' filename='libhector_gazebo_ros_gps.so'>
+        <updateRate>40</updateRate>
+        <robotNamespace>/</robotNamespace>
+        <frameId>base_link</frameId>
+        <topicName>/navsat/fix</topicName>
+        <velocityTopicName>/navsat/vel</velocityTopicName>
+        <referenceLatitude>49.9</referenceLatitude>
+        <referenceLongitude>8.9</referenceLongitude>
+        <referenceHeading>0</referenceHeading>
+        <referenceAltitude>0</referenceAltitude>
+        <drift>0.0001 0.0001 0.0001</drift>
+        <bodyName>base_link</bodyName>
+        <xyzOffset>0.18 -0.126 -0.1815</xyzOffset>
+        <rpyOffset>0 -0 0</rpyOffset>
+      </plugin>
+      <pose frame=''>5 -1.7 1 0 -0 3.14</pose>
+    </model>
+    <light name='user_point_light_0' type='point'>
+      <pose frame=''>2.52026 -1.84293 1 0 -0 0</pose>
+      <diffuse>0.5 0.5 0.5 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <attenuation>
+        <range>20</range>
+        <constant>0.5</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <cast_shadows>0</cast_shadows>
+      <direction>0 0 -1</direction>
+    </light>
+    <model name='realistic_curve_side1'>
+      <pose frame=''>4.68185 -0.326887 0 0 -0 1.5708</pose>
+      <static>1</static>
+      <link name='link_0'>
+        <collision name='collision_0'>
+          <pose frame=''>0 0 0.18 0 -0 3.14</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_0'>
+          <pose frame=''>0 0 0.18 0 -0 3.14</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_blue_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_1'>
+        <collision name='collision_1'>
+          <pose frame=''>0 0 0.54 0 -0 3.14</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_1'>
+          <pose frame=''>0 0 0.54 0 -0 3.14</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_red_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_2'>
+        <collision name='collision_2'>
+          <pose frame=''>0 0 0.9 0 -0 3.14</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_2'>
+          <pose frame=''>0 0 0.9 0 -0 3.14</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_green_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_3'>
+        <collision name='collision_3'>
+          <pose frame=''>0 0.465 0.54 0 -0 3.14</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_3'>
+          <pose frame=''>0 0.465 0.54 0 -0 3.14</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_blue_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_4'>
+        <collision name='collision_4'>
+          <pose frame=''>0 0.465 0.9 0 -0 3.14</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_4'>
+          <pose frame=''>0 0.465 0.9 0 -0 3.14</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_red_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_5'>
+        <collision name='collision_5'>
+          <pose frame=''>0 0.465 0.18 0 -0 3.14</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_5'>
+          <pose frame=''>0 0.465 0.18 0 -0 3.14</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_green_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_6'>
+        <collision name='collision_6'>
+          <pose frame=''>0 0.93 0.9 0 -0 3.14</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_6'>
+          <pose frame=''>0 0.93 0.9 0 -0 3.14</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_blue_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_7'>
+        <collision name='collision_7'>
+          <pose frame=''>0 0.93 0.18 0 -0 3.14</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_7'>
+          <pose frame=''>0 0.93 0.18 0 -0 3.14</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_red_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_8'>
+        <collision name='collision_8'>
+          <pose frame=''>0 0.93 0.54 0 -0 3.14</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_8'>
+          <pose frame=''>0 0.93 0.54 0 -0 3.14</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_green_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_9'>
+        <collision name='collision_9'>
+          <pose frame=''>0 1.395 0.18 0 -0 3.14</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_9'>
+          <pose frame=''>0 1.395 0.18 0 -0 3.14</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_blue_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_10'>
+        <collision name='collision_10'>
+          <pose frame=''>0 1.395 0.54 0 -0 3.14</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_10'>
+          <pose frame=''>0 1.395 0.54 0 -0 3.14</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_red_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_11'>
+        <collision name='collision_11'>
+          <pose frame=''>0 1.395 0.9 0 -0 3.14</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_11'>
+          <pose frame=''>0 1.395 0.9 0 -0 3.14</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_green_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_12'>
+        <collision name='collision_12'>
+          <pose frame=''>0 1.86 0.54 0 -0 3.14</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_12'>
+          <pose frame=''>0 1.86 0.54 0 -0 3.14</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_blue_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_13'>
+        <collision name='collision_13'>
+          <pose frame=''>0 1.86 0.9 0 -0 3.14</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_13'>
+          <pose frame=''>0 1.86 0.9 0 -0 3.14</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_red_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_14'>
+        <collision name='collision_14'>
+          <pose frame=''>0 1.86 0.18 0 -0 3.14</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_14'>
+          <pose frame=''>0 1.86 0.18 0 -0 3.14</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_green_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_15'>
+        <collision name='collision_15'>
+          <pose frame=''>0 2.325 0 3.14159 0.001593 3.14159</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_15'>
+          <pose frame=''>0 2.325 0.9 0 -0 3.14</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_blue_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_16'>
+        <collision name='collision_16'>
+          <pose frame=''>0 2.325 0.18 0 -0 3.14</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_16'>
+          <pose frame=''>0 2.325 0.18 0 -0 3.14</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_red_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_17'>
+        <collision name='collision_17'>
+          <pose frame=''>0 2.325 0.54 0 -0 3.14</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_17'>
+          <pose frame=''>0 2.325 0.54 0 -0 3.14</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_green_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_18'>
+        <collision name='collision_18'>
+          <pose frame=''>0.1 2.68 0.18 0 -0 2.5</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_18'>
+          <pose frame=''>0.1 2.68 0.18 0 -0 2.5</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_blue_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_19'>
+        <collision name='collision_19'>
+          <pose frame=''>0.1 2.68 0.54 0 -0 2.5</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_19'>
+          <pose frame=''>0.1 2.68 0.54 0 -0 2.5</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_red_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_20'>
+        <collision name='collision_20'>
+          <pose frame=''>0.1 2.68 0.9 0 -0 2.5</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_20'>
+          <pose frame=''>0.1 2.68 0.9 0 -0 2.5</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_green_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_21'>
+        <collision name='collision_21'>
+          <pose frame=''>0.43 3.035 0.54 0 -0 2.3</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_21'>
+          <pose frame=''>0.43 3.035 0.54 0 -0 2.3</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_blue_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_22'>
+        <collision name='collision_22'>
+          <pose frame=''>0.43 2.325 0.9 0 -0 2.3</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_22'>
+          <pose frame=''>0.43 3.035 0.9 0 -0 2.3</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_red_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_23'>
+        <collision name='collision_23'>
+          <pose frame=''>0.43 3.035 0.18 0 -0 2.3</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_23'>
+          <pose frame=''>0.43 3.035 0.18 0 -0 2.3</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_green_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_24'>
+        <collision name='collision_24'>
+          <pose frame=''>0.9 3.15 0.9 3.14159 1.57079 3.14159</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_24'>
+          <pose frame=''>0.9 3.15 0.9 0 -0 1.5708</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_blue_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_25'>
+        <collision name='collision_25'>
+          <pose frame=''>0.9 3.15 0.18 0 -0 1.5708</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_25'>
+          <pose frame=''>0.9 3.15 0.18 0 -0 1.5708</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_red_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_26'>
+        <collision name='collision_26'>
+          <pose frame=''>0.9 3.15 0.54 0 -0 1.5708</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_26'>
+          <pose frame=''>0.9 3.15 0.54 0 -0 1.5708</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_green_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_27'>
+        <collision name='collision_27'>
+          <pose frame=''>1.365 3.15 0.18 0 -0 1.5708</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_27'>
+          <pose frame=''>1.365 3.15 0.18 0 -0 1.5708</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_blue_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_28'>
+        <collision name='collision_28'>
+          <pose frame=''>1.365 3.15 0.54 0 -0 1.5708</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_28'>
+          <pose frame=''>1.365 3.15 0.54 0 -0 1.5708</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_red_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_29'>
+        <collision name='collision_29'>
+          <pose frame=''>1.365 3.15 0.9 0 -0 1.5708</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_29'>
+          <pose frame=''>1.365 3.15 0.9 0 -0 1.5708</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_green_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_30'>
+        <collision name='collision_30'>
+          <pose frame=''>1.83 3.15 0.54 0 -0 1.5708</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_30'>
+          <pose frame=''>1.83 3.15 0.54 0 -0 1.5708</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_blue_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_31'>
+        <collision name='collision_31'>
+          <pose frame=''>1.83 3.15 0.9 0 -0 1.5708</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_31'>
+          <pose frame=''>1.83 3.15 0.9 0 -0 1.5708</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_red_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_32'>
+        <collision name='collision_32'>
+          <pose frame=''>1.83 3.15 0.18 0 -0 1.5708</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_32'>
+          <pose frame=''>1.83 3.15 0.18 0 -0 1.5708</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_green_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_33'>
+        <collision name='collision_33'>
+          <pose frame=''>2.295 3.15 0.9 3.14159 1.57079 3.14159</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_33'>
+          <pose frame=''>2.295 3.15 0.9 0 -0 1.5708</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_blue_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_34'>
+        <collision name='collision_34'>
+          <pose frame=''>2.295 3.15 0.18 0 -0 1.5708</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_34'>
+          <pose frame=''>2.295 3.15 0.18 0 -0 1.5708</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_red_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_35'>
+        <collision name='collision_35'>
+          <pose frame=''>2.295 3.15 0.54 0 -0 1.5708</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_35'>
+          <pose frame=''>2.295 3.15 0.54 0 -0 1.5708</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_green_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_36'>
+        <collision name='collision_36'>
+          <pose frame=''>2.76 3.15 0.18 0 -0 1.5708</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_36'>
+          <pose frame=''>2.76 3.15 0.18 0 -0 1.5708</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_blue_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_37'>
+        <collision name='collision_37'>
+          <pose frame=''>2.76 3.15 0.54 0 -0 1.5708</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_37'>
+          <pose frame=''>2.76 3.15 0.54 0 -0 1.5708</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_red_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_38'>
+        <collision name='collision_38'>
+          <pose frame=''>2.76 3.15 0.9 0 -0 1.5708</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_38'>
+          <pose frame=''>2.76 3.15 0.9 0 -0 1.5708</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_green_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='realistic_curve_side2_1'>
+      <pose frame=''>4.58227 -1.26122 0 0 -0 1.5708</pose>
+      <static>1</static>
+      <link name='link_0_0'>
+        <collision name='collision_0_0'>
+          <pose frame=''>-1.3 0 0.18 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_0_0'>
+          <pose frame=''>-1.3 0 0.18 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_blue_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_1_0'>
+        <collision name='collision_1_0'>
+          <pose frame=''>-1.3 0.54 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_1_0'>
+          <pose frame=''>-1.3 0 0.54 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_red_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_2_0'>
+        <collision name='collision_2_0'>
+          <pose frame=''>-1.3 0 0.9 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_2_0'>
+          <pose frame=''>-1.3 0 0.9 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_green_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_3_0'>
+        <collision name='collision_3_0'>
+          <pose frame=''>-1.3 0.465 0.54 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_3_0'>
+          <pose frame=''>-1.3 0.465 0.54 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_blue_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_4_0'>
+        <collision name='collision_4_0'>
+          <pose frame=''>-1.3 0.465 0.9 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_4_0'>
+          <pose frame=''>-1.3 0.465 0.9 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_red_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_5_0'>
+        <collision name='collision_5_0'>
+          <pose frame=''>-1.3 0.465 0.18 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_5_0'>
+          <pose frame=''>-1.3 0.465 0.18 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_green_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_6_0'>
+        <collision name='collision_6_0'>
+          <pose frame=''>-1.3 0.93 0.9 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_6_0'>
+          <pose frame=''>-1.3 0.93 0.9 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_blue_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_7_0'>
+        <collision name='collision_7_0'>
+          <pose frame=''>-1.3 0.93 0.18 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_7_0'>
+          <pose frame=''>-1.3 0.93 0.18 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_red_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_8_0'>
+        <collision name='collision_8_0'>
+          <pose frame=''>-1.3 0.93 0.54 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_8_0'>
+          <pose frame=''>-1.3 0.93 0.54 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_green_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_9_0'>
+        <collision name='collision_9_0'>
+          <pose frame=''>-1.3 1.395 0.18 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_9_0'>
+          <pose frame=''>-1.3 1.395 0.18 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_blue_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_10_0'>
+        <collision name='collision_10_0'>
+          <pose frame=''>-1.3 1.395 0.54 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_10_0'>
+          <pose frame=''>-1.3 1.395 0.54 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_red_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_11_0'>
+        <collision name='collision_11_0'>
+          <pose frame=''>-1.3 1.395 0.9 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_11_0'>
+          <pose frame=''>-1.3 1.395 0.9 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_green_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_12_0'>
+        <collision name='collision_12_0'>
+          <pose frame=''>-1.3 1.86 0.54 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_12_0'>
+          <pose frame=''>-1.3 1.86 0.54 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_blue_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_13_0'>
+        <collision name='collision_13_0'>
+          <pose frame=''>-1.3 1.86 0.9 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_13_0'>
+          <pose frame=''>-1.3 1.86 0.9 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_red_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_14_0'>
+        <collision name='collision_14_0'>
+          <pose frame=''>-1.3 1.86 0.18 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_14_0'>
+          <pose frame=''>-1.3 1.86 0.18 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_green_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_15_0'>
+        <collision name='collision_15_0'>
+          <pose frame=''>-1.3 2.325 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_15_0'>
+          <pose frame=''>-1.3 2.325 0.9 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_blue_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_16_0'>
+        <collision name='collision_16_0'>
+          <pose frame=''>-1.3 2.325 0.18 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_16_0'>
+          <pose frame=''>-1.3 2.325 0.18 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_red_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_17_0'>
+        <collision name='collision_17_0'>
+          <pose frame=''>-1.3 2.325 0.54 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_17_0'>
+          <pose frame=''>-1.3 2.325 0.54 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_green_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='realistic_curve_side2_2'>
+      <pose frame=''>3.95566 -0.010608 0 0 -0 1.5708</pose>
+      <static>1</static>
+      <link name='link_18_0'>
+        <collision name='collision_18_0'>
+          <pose frame=''>0.9 4.45 0.9 3.14159 -1.57079 3.14159</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_18_0'>
+          <pose frame=''>0.9 4.45 0.9 0 0 -1.5708</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_blue_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_19_0'>
+        <collision name='collision_19_0'>
+          <pose frame=''>0.9 4.45 0.18 0 0 -1.5708</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_19_0'>
+          <pose frame=''>0.9 4.45 0.18 0 0 -1.5708</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_red_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_20_0'>
+        <collision name='collision_20_0'>
+          <pose frame=''>0.9 4.45 0.54 0 0 -1.5708</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_20_0'>
+          <pose frame=''>0.9 4.45 0.54 0 0 -1.5708</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_green_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_21_0'>
+        <collision name='collision_21_0'>
+          <pose frame=''>1.365 4.45 0.18 0 0 -1.5708</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_21_0'>
+          <pose frame=''>1.365 4.45 0.18 0 0 -1.5708</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_blue_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_22_0'>
+        <collision name='collision_22_0'>
+          <pose frame=''>1.365 4.45 0.54 0 0 -1.5708</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_22_0'>
+          <pose frame=''>1.365 4.45 0.54 0 0 -1.5708</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_red_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_23_0'>
+        <collision name='collision_23_0'>
+          <pose frame=''>1.365 4.45 0.9 0 0 -1.5708</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_23_0'>
+          <pose frame=''>1.365 4.45 0.9 0 0 -1.5708</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_green_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_24_0'>
+        <collision name='collision_24_0'>
+          <pose frame=''>1.83 4.45 0.54 0 0 -1.5708</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_24_0'>
+          <pose frame=''>1.83 4.45 0.54 0 0 -1.5708</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_blue_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_25_0'>
+        <collision name='collision_25_0'>
+          <pose frame=''>1.83 4.45 0.9 0 0 -1.5708</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_25_0'>
+          <pose frame=''>1.83 4.45 0.9 0 0 -1.5708</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_red_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_26_0'>
+        <collision name='collision_26_0'>
+          <pose frame=''>1.83 4.45 0.18 0 0 -1.5708</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_26_0'>
+          <pose frame=''>1.83 4.45 0.18 0 0 -1.5708</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_green_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_27_0'>
+        <collision name='collision_27_0'>
+          <pose frame=''>2.295 4.45 0.9 3.14159 -1.57079 3.14159</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_27_0'>
+          <pose frame=''>2.295 4.45 0.9 0 0 -1.5708</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_blue_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_28_0'>
+        <collision name='collision_28_0'>
+          <pose frame=''>2.295 4.45 0.18 0 0 -1.5708</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_28_0'>
+          <pose frame=''>2.295 4.45 0.18 0 0 -1.5708</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_red_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_29_0'>
+        <collision name='collision_29_0'>
+          <pose frame=''>2.295 4.45 0.54 0 0 -1.5708</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_29_0'>
+          <pose frame=''>2.295 4.45 0.54 0 0 -1.5708</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_green_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_30_0'>
+        <collision name='collision_30_0'>
+          <pose frame=''>2.76 4.45 0.18 0 0 -1.5708</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_30_0'>
+          <pose frame=''>2.76 4.45 0.18 0 0 -1.5708</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_blue_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_31_0'>
+        <collision name='collision_31_0'>
+          <pose frame=''>2.76 4.45 0.54 0 0 -1.5708</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_31_0'>
+          <pose frame=''>2.76 4.45 0.54 0 0 -1.5708</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_red_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_32_0'>
+        <collision name='collision_32_0'>
+          <pose frame=''>2.76 4.45 0.9 0 0 -1.5708</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_32_0'>
+          <pose frame=''>2.76 4.45 0.9 0 0 -1.5708</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_green_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_33_0'>
+        <collision name='collision_33_0'>
+          <pose frame=''>0.44 4.45 0.54 0 0 -1.5708</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_33_0'>
+          <pose frame=''>0.44 4.45 0.54 0 0 -1.5708</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_blue_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_34_0'>
+        <collision name='collision_34_0'>
+          <pose frame=''>0.4 4.45 0.9 0 0 -1.5708</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_34_0'>
+          <pose frame=''>0.44 4.45 0.9 0 0 -1.5708</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_red_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_35_0'>
+        <collision name='collision_35_0'>
+          <pose frame=''>0.44 4.45 0.18 0 0 -1.5708</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_35_0'>
+          <pose frame=''>0.44 4.45 0.18 0 0 -1.5708</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_green_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='1_stack_3'>
+      <pose frame=''>1.90308 -1.60495 0 0 -0 1.5708</pose>
+      <static>1</static>
+      <link name='link_0'>
+        <collision name='collision_0'>
+          <pose frame=''>0 0 0.18 0 -0 3.14</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_0'>
+          <pose frame=''>0 0 0.18 0 -0 3.14</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_blue_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_1'>
+        <collision name='collision_1'>
+          <pose frame=''>0 0 0.54 0 -0 3.14</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_1'>
+          <pose frame=''>0 0 0.54 0 -0 3.14</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_red_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_2'>
+        <collision name='collision_2'>
+          <pose frame=''>0 0 0.9 0 -0 3.14</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_2'>
+          <pose frame=''>0 0 0.9 0 -0 3.14</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_green_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='1_stack_4'>
+      <pose frame=''>1.39653 -1.88948 0 0 -0 1.5708</pose>
+      <static>1</static>
+      <link name='link_0'>
+        <collision name='collision_0'>
+          <pose frame=''>0 0 0.18 0 -0 3.14</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_0'>
+          <pose frame=''>0 0 0.18 0 -0 3.14</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_blue_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_1'>
+        <collision name='collision_1'>
+          <pose frame=''>0 0 0.54 0 -0 3.14</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_1'>
+          <pose frame=''>0 0 0.54 0 -0 3.14</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_red_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_2'>
+        <collision name='collision_2'>
+          <pose frame=''>0 0 0.9 0 -0 3.14</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_2'>
+          <pose frame=''>0 0 0.9 0 -0 3.14</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_green_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='1_stack_5'>
+      <pose frame=''>-0.283445 -0.694978 0 0 -0 1.5708</pose>
+      <static>1</static>
+      <link name='link_0'>
+        <collision name='collision_0'>
+          <pose frame=''>0 0 0.18 0 -0 3.14</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_0'>
+          <pose frame=''>0 0 0.18 0 -0 3.14</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_blue_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_1'>
+        <collision name='collision_1'>
+          <pose frame=''>0 0 0.54 0 -0 3.14</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_1'>
+          <pose frame=''>0 0 0.54 0 -0 3.14</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_red_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_2'>
+        <collision name='collision_2'>
+          <pose frame=''>0 0 0.9 0 -0 3.14</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_2'>
+          <pose frame=''>0 0 0.9 0 -0 3.14</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_green_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='1_stack_6'>
+      <pose frame=''>-0.416929 -0.147297 0 0 -0 1.5708</pose>
+      <static>1</static>
+      <link name='link_0'>
+        <collision name='collision_0'>
+          <pose frame=''>0 0 0.18 0 -0 3.14</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_0'>
+          <pose frame=''>0 0 0.18 0 -0 3.14</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_blue_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_1'>
+        <collision name='collision_1'>
+          <pose frame=''>0 0 0.54 0 -0 3.14</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_1'>
+          <pose frame=''>0 0 0.54 0 -0 3.14</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_red_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_2'>
+        <collision name='collision_2'>
+          <pose frame=''>0 0 0.9 0 -0 3.14</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_2'>
+          <pose frame=''>0 0 0.9 0 -0 3.14</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_green_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='1_stack_7'>
+      <pose frame=''>-0.454928 -0.419159 0 0 -0 1.5708</pose>
+      <static>1</static>
+      <link name='link_0'>
+        <collision name='collision_0'>
+          <pose frame=''>0 0 0.18 0 -0 3.14</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_0'>
+          <pose frame=''>0 0 0.18 0 -0 3.14</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_blue_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_1'>
+        <collision name='collision_1'>
+          <pose frame=''>0 0 0.54 0 -0 3.14</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_1'>
+          <pose frame=''>0 0 0.54 0 -0 3.14</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_red_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='link_2'>
+        <collision name='collision_2'>
+          <pose frame=''>0 0 0.9 0 -0 3.14</pose>
+          <geometry>
+            <box>
+              <size>0.31 0.465 0.36</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual_2'>
+          <pose frame=''>0 0 0.9 0 -0 3.14</pose>
+          <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_green_circle_border.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <light name='user_point_light_1' type='point'>
+      <pose frame=''>0.671486 1.188 1 0 -0 0</pose>
+      <diffuse>0.5 0.5 0.5 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <attenuation>
+        <range>20</range>
+        <constant>0.5</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <cast_shadows>0</cast_shadows>
+      <direction>0 0 -1</direction>
+    </light>
+  </world>
+</sdf>

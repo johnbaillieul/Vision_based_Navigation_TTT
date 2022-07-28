@@ -1,0 +1,2834 @@
+<?xml version='1_0'?>
+<sdf version="1.5">
+  <model name="boxes_Lcorridor model">
+    <pose>0 0 0 0 0 0</pose>
+    <static>true</static>
+    <!-- 1st row -->
+    <link name="link_0">
+      <collision name="collision_0">
+        <pose>-1 0 1.25 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_0'>
+        <pose>-1 0 1.25 0 0 1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_1">
+      <collision name="collision_1">
+        <pose>-1 0 0.75 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_1'>
+        <pose>-1 0 0.75 0 0 1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_2">
+      <collision name="collision_2">
+        <pose>-1 0 0.25 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_2'>
+        <pose>-1 0 0.25 0 0 1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- 2nd row -->
+
+    <link name="link_3">
+      <collision name="collision_3">
+        <pose>-1 0.75 0.25 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_3'>
+        <pose>-1 0.75 0.25 0 0 1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_4">
+      <collision name="collision_4">
+        <pose>-1 0.75 1.25 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_4'>
+        <pose>-1 0.75 1.25 0 0 1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_5">
+      <collision name="collision_5">
+        <pose>-1 0.75 0.75 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_5'>
+        <pose>-1 0.75 0.75 0 0 1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- 3rd row -->
+
+    <link name="link_6">
+      <collision name="collision_6">
+        <pose>-1 1.5 0.75 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_6'>
+        <pose>-1 1.5 0.75 0 0 1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_7">
+      <collision name="collision_7">
+        <pose>-1 1.5 0.25 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_7'>
+        <pose>-1 1.5 0.25 0 0 1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_8">
+      <collision name="collision_8">
+        <pose>-1 1.5 1.25 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_8'>
+        <pose>-1 1.5 1.25 0 0 1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- 4th row -->
+
+    <link name="link_9">
+      <collision name="collision_9">
+        <pose>-1 2.25 1.25 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_9'>
+        <pose>-1 2.25 1.25 0 0 1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_10">
+      <collision name="collision_10">
+        <pose>-1 2.25 0.75 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_10'>
+        <pose>-1 2.25 0.75 0 0 1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_11">
+      <collision name="collision_11">
+        <pose>-1 2.25 0.25 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_11'>
+        <pose>-1 2.25 0.25 0 0 1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- 5th row -->
+
+    <link name="link_12">
+      <collision name="collision_12">
+        <pose>-1 3 0.25 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_12'>
+        <pose>-1 3 0.25 0 0 1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_13">
+      <collision name="collision_13">
+        <pose>-1 3 1.25 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_13'>
+        <pose>-1 3 1.25 0 0 1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_14">
+      <collision name="collision_14">
+        <pose>-1 3 0.75 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_14'>
+        <pose>-1 3 0.75 0 0 1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- 6 row -->
+
+    <link name="link_15">
+      <collision name="collision_15">
+        <pose>-1 3.75 0.75 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_15'>
+        <pose>-1 3.75 0.75 0 0 1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_16">
+      <collision name="collision_16">
+        <pose>-1 3.75 0.25 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_16'>
+        <pose>-1 3.75 0.25 0 0 1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_17">
+      <collision name="collision_17">
+        <pose>-1 3.75 1.25 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_17'>
+        <pose>-1 3.75 1.25 0 0 1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- 7 row -->
+    <link name="link_18">
+      <collision name="collision_18">
+        <pose>-1 4.5 1.25 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_18'>
+        <pose>-1 4.5 1.25 0 0 1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_19">
+      <collision name="collision_19">
+        <pose>-1 4.5 0.75 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_19'>
+        <pose>-1 4.5 0.75 0 0 1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_20">
+      <collision name="collision_20">
+        <pose>-1 4.5 0.25 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_20'>
+        <pose>-1 4.5 0.25 0 0 1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- 8 row -->
+
+    <link name="link_21">
+      <collision name="collision_21">
+        <pose>-1 5.25 0.25 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_21'>
+        <pose>-1 5.25 0.25 0 0 1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_22">
+      <collision name="collision_22">
+        <pose>-1 5.25 1.25 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_22'>
+        <pose>-1 5.25 1.25 0 0 1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_23">
+      <collision name="collision_23">
+        <pose>-1 5.25 0.75 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_23'>
+        <pose>-1 5.25 0.75 0 0 1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- 9 row -->
+
+    <link name="link_24">
+      <collision name="collision_24">
+        <pose>-1 6 0.75 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_24'>
+        <pose>-1 6 0.75 0 0 1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_25">
+      <collision name="collision_25">
+        <pose>-1 6 0.25 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_25'>
+        <pose>-1 6 0.25 0 0 1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_26">
+      <collision name="collision_26">
+        <pose>-1 6 1.25 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_26'>
+        <pose>-1 6 1.25 0 0 1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- 10 row -->
+
+    <link name="link_27">
+      <collision name="collision_27">
+        <pose>-1 6.75 1.25 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_27'>
+        <pose>-1 6.75 1.25 0 0 1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_28">
+      <collision name="collision_28">
+        <pose>-1 6.75 0.75 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_28'>
+        <pose>-1 6.75 0.75 0 0 1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_29">
+      <collision name="collision_29">
+        <pose>-1 6.75 0.25 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_29'>
+        <pose>-1 6.75 0.25 0 0 1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- 11 row -->
+
+    <link name="link_30">
+      <collision name="collision_30">
+        <pose>-1 7.5 0.25 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_30'>
+        <pose>-1 7.5 0.25 0 0 1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_31">
+      <collision name="collision_31">
+        <pose>-1 7.5 1.25 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_31'>
+        <pose>-1 7.5 1.25 0 0 1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_32">
+      <collision name="collision_32">
+        <pose>-1 7.5 0.75 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_32'>
+        <pose>-1 7.5 0.75 0 0 1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- 12 row -->
+
+    <link name="link_33">
+      <collision name="collision_33">
+        <pose>-1 8.25 0.75 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_33'>
+        <pose>-1 8.25 0.75 0 0 1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_34">
+      <collision name="collision_34">
+        <pose>-1 8.25 0.25 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_34'>
+        <pose>-1 8.25 0.25 0 0 1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_35">
+      <collision name="collision_35">
+        <pose>-1 8.25 1.25 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_35'>
+        <pose>-1 8.25 1.25 0 0 1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- 13 row -->
+
+    <link name="link_36">
+      <collision name="collision_36">
+        <pose>-1 9 1.25 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_36'>
+        <pose>-1 9 1.25 0 0 1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_37">
+      <collision name="collision_37">
+        <pose>-1 9 0.75 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_37'>
+        <pose>-1 9 0.75 0 0 1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_38">
+      <collision name="collision_38">
+        <pose>-1 9 0.25 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_38'>
+        <pose>-1 9 0.25 0 0 1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- 14 row -->
+
+    <link name="link_39">
+      <collision name="collision_39">
+        <pose>-1 9.75 0.25 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_39'>
+        <pose>-1 9.75 0.25 0 0 1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_40">
+      <collision name="collision_40">
+        <pose>-1 9.75 1.25 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_40'>
+        <pose>-1 9.75 1.25 0 0 1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_41">
+      <collision name="collision_41">
+        <pose>-1 9.75 0.75 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_41'>
+        <pose>-1 9.75 0.75 0 0 1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- 15 row -->
+
+    <link name="link_42">
+      <collision name="collision_42">
+        <pose>-1 10.5 0.75 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_42'>
+        <pose>-1 10.5 0.75 0 0 1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_43">
+      <collision name="collision_43">
+        <pose>-1 10.5 0.25 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_43'>
+        <pose>-1 10.5 0.25 0 0 1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_44">
+      <collision name="collision_44">
+        <pose>-1 10.5 1.25 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_44'>
+        <pose>-1 10.5 1.25 0 0 1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+
+    <!-- other side -->
+
+        <!-- 1st row -->
+    <link name="link_0_0">
+      <collision name="collision_0_0">
+        <pose>1 0 1.25 0 0 -1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_0_0'>
+        <pose>1 0 1.25 0 0 -1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_1_0">
+      <collision name="collision_1_0">
+        <pose>1 0 0.75 0 0 -1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_1_0'>
+        <pose>1 0 0.75 0 0 -1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_2_0">
+      <collision name="collision_2_0">
+        <pose>1 0 0.25 0 0 -1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_2_0'>
+        <pose>1 0 0.25 0 0 -1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- 2nd row -->
+
+    <link name="link_3_0">
+      <collision name="collision_3_0">
+        <pose>1 0.75 0.25 0 0 -1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_3_0'>
+        <pose>1 0.75 0.25 0 0 -1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_4_0">
+      <collision name="collision_4_0">
+        <pose>1 0.75 1.25 0 0 -1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_4_0'>
+        <pose>1 0.75 1.25 0 0 -1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_5_0">
+      <collision name="collision_5_0">
+        <pose>1 0.75 0.75 0 0 -1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_5_0'>
+        <pose>1 0.75 0.75 0 0 -1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- 3rd row -->
+
+    <link name="link_6_0">
+      <collision name="collision_6_0">
+        <pose>1 1.5 0.75 0 0 -1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_6_0'>
+        <pose>1 1.5 0.75 0 0 -1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_7_0">
+      <collision name="collision_7_0">
+        <pose>1 1.5 0.25 0 0 -1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_7_0'>
+        <pose>1 1.5 0.25 0 0 -1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_8_0">
+      <collision name="collision_8_0">
+        <pose>1 1.5 1.25 0 0 -1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_8_0'>
+        <pose>1 1.5 1.25 0 0 -1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- 4th row -->
+
+    <link name="link_9_0">
+      <collision name="collision_9_0">
+        <pose>1 2.25 1.25 0 0 -1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_9_0'>
+        <pose>1 2.25 1.25 0 0 -1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_10_0">
+      <collision name="collision_10_0">
+        <pose>1 2.25 0.75 0 0 -1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_10_0'>
+        <pose>1 2.25 0.75 0 0 -1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_11_0">
+      <collision name="collision_11_0">
+        <pose>1 2.25 0.25 0 0 -1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_11_0'>
+        <pose>1 2.25 0.25 0 0 -1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- 5th row -->
+
+    <link name="link_12_0">
+      <collision name="collision_12_0">
+        <pose>1 3 0.25 0 0 -1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_12_0'>
+        <pose>1 3 0.25 0 0 -1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_13_0">
+      <collision name="collision_13_0">
+        <pose>1 3 1.25 0 0 -1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_13_0'>
+        <pose>1 3 1.25 0 0 -1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_14_0">
+      <collision name="collision_14_0">
+        <pose>1 3 0.75 0 0 -1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_14_0'>
+        <pose>1 3 0.75 0 0 -1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- 6 row -->
+
+    <link name="link_15_0">
+      <collision name="collision_15_0">
+        <pose>1 3.75 0.75 0 0 -1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_15_0'>
+        <pose>1 3.75 0.75 0 0 -1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_16_0">
+      <collision name="collision_16_0">
+        <pose>1 3.75 0.25 0 0 -1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_16_0'>
+        <pose>1 3.75 0.25 0 0 -1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_17_0">
+      <collision name="collision_17_0">
+        <pose>1 3.75 1.25 0 0 -1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_17_0'>
+        <pose>1 3.75 1.25 0 0 -1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- 7 row -->
+    <link name="link_18_0">
+      <collision name="collision_18_0">
+        <pose>1 4.5 1.25 0 0 -1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_18_0'>
+        <pose>1 4.5 1.25 0 0 -1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_19_0">
+      <collision name="collision_19_0">
+        <pose>1 4.5 0.75 0 0 -1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_19_0'>
+        <pose>1 4.5 0.75 0 0 -1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_20_0">
+      <collision name="collision_20_0">
+        <pose>1 4.5 0.25 0 0 -1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_20_0'>
+        <pose>1 4.5 0.25 0 0 -1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- 8 row -->
+
+    <link name="link_21_0">
+      <collision name="collision_21_0">
+        <pose>1 5.25 0.25 0 0 -1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_21_0'>
+        <pose>1 5.25 0.25 0 0 -1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_22_0">
+      <collision name="collision_22_0">
+        <pose>1 5.25 1.25 0 0 -1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_22_0'>
+        <pose>1 5.25 1.25 0 0 -1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_23_0">
+      <collision name="collision_23_0">
+        <pose>1 5.25 0.75 0 0 -1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_23_0'>
+        <pose>1 5.25 0.75 0 0 -1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- 9 row -->
+
+    <link name="link_24_0">
+      <collision name="collision_24_0">
+        <pose>1 6 0.75 0 0 -1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_24_0'>
+        <pose>1 6 0.75 0 0 -1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_25_0">
+      <collision name="collision_25_0">
+        <pose>1 6 0.25 0 0 -1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_25_0'>
+        <pose>1 6 0.25 0 0 -1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_26_0">
+      <collision name="collision_26_0">
+        <pose>1 6 1.25 0 0 -1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_26_0'>
+        <pose>1 6 1.25 0 0 -1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- 10 row -->
+
+    <link name="link_27_0">
+      <collision name="collision_27_0">
+        <pose>1 6.75 1.25 0 0 -1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_27_0'>
+        <pose>1 6.75 1.25 0 0 -1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_28_0">
+      <collision name="collision_28_0">
+        <pose>1 6.75 0.75 0 0 -1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_28_0'>
+        <pose>1 6.75 0.75 0 0 -1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_29_0">
+      <collision name="collision_29_0">
+        <pose>1 6.75 0.25 0 0 -1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_29_0'>
+        <pose>1 6.75 0.25 0 0 -1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- 11 row -->
+
+    <link name="link_30_0">
+      <collision name="collision_30_0">
+        <pose>1 7.5 0.25 0 0 -1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_30_0'>
+        <pose>1 7.5 0.25 0 0 -1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_31_0">
+      <collision name="collision_31_0">
+        <pose>1 7.5 1.25 0 0 -1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_31_0'>
+        <pose>1 7.5 1.25 0 0 -1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_32_0">
+      <collision name="collision_32_0">
+        <pose>1 7.5 0.75 0 0 -1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_32_0'>
+        <pose>1 7.5 0.75 0 0 -1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- 12 row -->
+
+    <link name="link_33_0">
+      <collision name="collision_33_0">
+        <pose>1 8.25 0.75 0 0 -1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_33_0'>
+        <pose>1 8.25 0.75 0 0 -1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_34_0">
+      <collision name="collision_34_0">
+        <pose>1 8.25 0.25 0 0 -1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_34_0'>
+        <pose>1 8.25 0.25 0 0 -1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_35_0">
+      <collision name="collision_35_0">
+        <pose>1 8.25 1.25 0 0 -1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_35_0'>
+        <pose>1 8.25 1.25 0 0 -1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link> 
+
+    <!-- other corridor -->
+
+    <!-- 1 row -->
+    <link name="link_0_1">
+      <collision name="collision_0_1">
+        <pose>-0.5375 10.875 1.25 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_0_1'>
+        <pose>-0.5375 10.875 1.25 0 0 0</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_1_1">
+      <collision name="collision_1_1">
+        <pose>-0.5375 10.875 0.75 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_1_1'>
+        <pose>-0.5375 10.875 0.75 0 0 0</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_2_1">
+      <collision name="collision_2_1">
+        <pose>-0.5375 10.875 0.25 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_2_1'>
+        <pose>-0.5375 10.875 0.25 0 0 0</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- 2nd row -->
+
+    <link name="link_3_1">
+      <collision name="collision_3_1">
+        <pose>0.2125 10.875 0.25 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_3_1'>
+        <pose>0.2125 10.875 0.25 0 0 0</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_4_1">
+      <collision name="collision_4_1">
+        <pose>0.2125 10.875 1.25 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_4_1'>
+        <pose>0.2125 10.875 1.25 0 0 0</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_5_1">
+      <collision name="collision_5_1">
+        <pose>0.2125 10.875 0.75 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_5_1'>
+        <pose>0.2125 10.875 0.75 0 0 0</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <!-- 3rd row -->
+
+    <link name="link_6_1">
+      <collision name="collision_6_1">
+        <pose>0.9625 10.875 0.75 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_6_1'>
+        <pose>0.9625 10.875 0.75 0 0 0</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_7_1">
+      <collision name="collision_7_1">
+        <pose>0.9625 10.875 0.25 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_7_1'>
+        <pose>0.9625 10.875 0.25 0 0 0</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_8_1">
+      <collision name="collision_8_1">
+        <pose>0.9625 10.875 1.25 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_8_1'>
+        <pose>0.9625 10.875 1.25 0 0 0</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- 4 row -->
+    <link name="link_9_1">
+      <collision name="collision_9_1">
+        <pose>1.7125 10.875 1.25 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_9_1'>
+        <pose>1.7125 10.875 1.25 0 0 0</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_10_1">
+      <collision name="collision_10_1">
+        <pose>1.7125 10.875 0.75 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_10_1'>
+        <pose>1.7125 10.875 0.75 0 0 0</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_11_1">
+      <collision name="collision_11_1">
+        <pose>1.7125 10.875 0.25 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_11_1'>
+        <pose>1.7125 10.875 0.25 0 0 0</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- 5 row -->
+
+    <link name="link_12_1">
+      <collision name="collision_12_1">
+        <pose>2.4625 10.875 0.25 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_12_1'>
+        <pose>2.4625 10.875 0.25 0 0 0</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_13_1">
+      <collision name="collision_13_1">
+        <pose>2.4625 10.875 1.25 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_13_1'>
+        <pose>2.4625 10.875 1.25 0 0 0</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_14_1">
+      <collision name="collision_14_1">
+        <pose>2.4625 10.875 0.75 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_14_1'>
+        <pose>2.4625 10.875 0.75 0 0 0</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- 6 row -->
+
+    <link name="link_15_1">
+      <collision name="collision_15_1">
+        <pose>3.2125 10.875 0.75 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_15_1'>
+        <pose>3.2125 10.875 0.75 0 0 0</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_16_1">
+      <collision name="collision_16_1">
+        <pose>3.2125 10.875 0.25 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_16_1'>
+        <pose>3.2125 10.875 0.25 0 0 0</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_17_1">
+      <collision name="collision_17_1">
+        <pose>3.2125 10.875 1.25 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_17_1'>
+        <pose>3.2125 10.875 1.25 0 0 0</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- 7 row -->
+    <link name="link_18_1">
+      <collision name="collision_18_1">
+        <pose>3.9625 10.875 1.25 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_18_1'>
+        <pose>3.9625 10.875 1.25 0 0 0</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_19_1">
+      <collision name="collision_19_1">
+        <pose>3.9625 10.875 0.75 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_19_1'>
+        <pose>3.9625 10.875 0.75 0 0 0</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_20_1">
+      <collision name="collision_20_1">
+        <pose>3.9625 10.875 0.25 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_20_1'>
+        <pose>3.9625 10.875 0.25 0 0 0</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!--8 row -->
+
+    <link name="link_21_1">
+      <collision name="collision_21_1">
+        <pose>4.7125 10.875 0.25 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_21_1'>
+        <pose>4.7125 10.875 0.25 0 0 0</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_22_1">
+      <collision name="collision_22_1">
+        <pose>4.7125 10.875 1.25 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_22_1'>
+        <pose>4.7125 10.875 1.25 0 0 0</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_23_1">
+      <collision name="collision_23_1">
+        <pose>4.7125 10.875 0.75 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_23_1'>
+        <pose>4.7125 10.875 0.75 0 0 0</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- 9 row -->
+
+    <link name="link_24_1">
+      <collision name="collision_24_1">
+        <pose>5.4625 10.875 0.75 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_24_1'>
+        <pose>5.4625 10.875 0.75 0 0 0</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_25_1">
+      <collision name="collision_25_1">
+        <pose>5.4625 10.875 0.25 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_25_1'>
+        <pose>5.4625 10.875 0.25 0 0 0</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_26_1">
+      <collision name="collision_26_1">
+        <pose>5.4625 10.875 1.25 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_26_1'>
+        <pose>5.4625 10.875 1.25 0 0 0</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- 10 row -->
+    <link name="link_27_1">
+      <collision name="collision_27_1">
+        <pose>6.2125 10.875 1.25 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_27_1'>
+        <pose>6.2125 10.875 1.25 0 0 0</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_28_1">
+      <collision name="collision_28_1">
+        <pose>6.2125 10.875 0.75 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_28_1'>
+        <pose>6.2125 10.875 0.75 0 0 0</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_29_1">
+      <collision name="collision_29_1">
+        <pose>6.2125 10.875 0.25 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_26_1'>
+        <pose>6.2125 10.875 0.25 0 0 0</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- 11 row -->
+
+    <link name="link_30_1">
+      <collision name="collision_30_1">
+        <pose>6.9625 10.875 0.25 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_30_1'>
+        <pose>6.9625 10.875 0.25 0 0 0</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_31_1">
+      <collision name="collision_31_1">
+        <pose>6.9625 10.875 1.25 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_31_1'>
+        <pose>6.9625 10.875 1.25 0 0 0</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_32_1">
+      <collision name="collision_32_1">
+        <pose>6.9625 10.875 0.75 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_32_1'>
+        <pose>6.9625 10.875 0.75 0 0 0</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <!-- 12 row -->
+
+    <link name="link_33_1">
+      <collision name="collision_33_1">
+        <pose>7.7125 10.875 0.75 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_33_1'>
+        <pose>7.7125 10.875 0.75 0 0 0</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_34_1">
+      <collision name="collision_34_1">
+        <pose>7.7125 10.875 0.25 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_34_1'>
+        <pose>7.7125 10.875 0.25 0 0 0</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_35_1">
+      <collision name="collision_35_1">
+        <pose>7.7125 10.875 1.25 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_35_1'>
+        <pose>7.7125 10.875 1.25 0 0 0</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- other corridor other side -->
+
+    <!-- 1 row -->
+    <link name="link_0_2">
+      <collision name="collision_0_2">
+        <pose>1.4625 8.6 1.25 0 0 3.14159265359</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_0_2'>
+        <pose>1.4625 8.6 1.25 0 0 3.14159265359</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_1_2">
+      <collision name="collision_1_2">
+        <pose>1.4625 8.6 0.75 0 0 3.14159265359</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_1_2'>
+        <pose>1.4625 8.6 0.75 0 0 3.14159265359</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_2_2">
+      <collision name="collision_2_2">
+        <pose>1.4625 8.6 0.25 0 0 3.14159265359</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_2_2'>
+        <pose>1.4625 8.6 0.25 0 0 3.14159265359</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- 2nd row -->
+
+    <link name="link_3_2">
+      <collision name="collision_3_2">
+        <pose>2.2125 8.6 0.25 0 0 3.14159265359</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_3_2'>
+        <pose>2.2125 8.6 0.25 0 0 3.14159265359</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_4_2">
+      <collision name="collision_4_2">
+        <pose>2.2125 8.6 1.25 0 0 3.14159265359</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_4_2'>
+        <pose>2.2125 8.6 1.25 0 0 3.14159265359</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_5_2">
+      <collision name="collision_5_2">
+        <pose>2.2125 8.6 0.75 0 0 3.14159265359</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_5_2'>
+        <pose>2.2125 8.6 0.75 0 0 3.14159265359</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <!-- 3rd row -->
+
+    <link name="link_6_2">
+      <collision name="collision_6_2">
+        <pose>2.9625 8.6 0.75 0 0 3.14159265359</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_6_2'>
+        <pose>2.9625 8.6 0.75 0 0 3.14159265359</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_7_2">
+      <collision name="collision_7_2">
+        <pose>2.9625 8.6 0.25 0 0 3.14159265359</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_7_2'>
+        <pose>2.9625 8.6 0.25 0 0 3.14159265359</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_8_2">
+      <collision name="collision_8_2">
+        <pose>2.9625 8.6 1.25 0 0 3.14159265359</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_8_2'>
+        <pose>2.9625 8.6 1.25 0 0 3.14159265359</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- 4 row -->
+    <link name="link_9_2">
+      <collision name="collision_9_2">
+        <pose>3.7125 8.6 1.25 0 0 3.14159265359</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_9_2'>
+        <pose>3.7125 8.6 1.25 0 0 3.14159265359</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_10_2">
+      <collision name="collision_10_2">
+        <pose>3.7125 8.6 0.75 0 0 3.14159265359</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_10_2'>
+        <pose>3.7125 8.6 0.75 0 0 3.14159265359</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_11_2">
+      <collision name="collision_11_2">
+        <pose>3.7125 8.6 0.25 0 0 3.14159265359</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_11_2'>
+        <pose>3.7125 8.6 0.25 0 0 3.14159265359</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- 5 row -->
+
+    <link name="link_12_2">
+      <collision name="collision_12_2">
+        <pose>4.4625 8.6 0.25 0 0 3.14159265359</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_12_2'>
+        <pose>4.4625 8.6 0.25 0 0 3.14159265359</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_13_2">
+      <collision name="collision_13_2">
+        <pose>4.4625 8.6 1.25 0 0 3.14159265359</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_13_2'>
+        <pose>4.4625 8.6 1.25 0 0 3.14159265359</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_14_2">
+      <collision name="collision_14_2">
+        <pose>4.4625 8.6 0.75 0 0 3.14159265359</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_14_2'>
+        <pose>4.4625 8.6 0.75 0 0 3.14159265359</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- 6 row -->
+
+    <link name="link_15_2">
+      <collision name="collision_15_2">
+        <pose>5.2125 8.6 0.75 0 0 3.14159265359</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_15_2'>
+        <pose>5.2125 8.6 0.75 0 0 3.14159265359</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_16_2">
+      <collision name="collision_16_2">
+        <pose>5.2125 8.6 0.25 0 0 3.14159265359</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_16_2'>
+        <pose>5.2125 8.6 0.25 0 0 3.14159265359</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_17_2">
+      <collision name="collision_17_2">
+        <pose>5.2125 8.6 1.25 0 0 3.14159265359</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_17_2'>
+        <pose>5.2125 8.6 1.25 0 0 3.14159265359</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- 7 row -->
+    <link name="link_18_2">
+      <collision name="collision_18_2">
+        <pose>5.9625 8.6 1.25 0 0 3.14159265359</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_18_2'>
+        <pose>5.9625 8.6 1.25 0 0 3.14159265359</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_19_2">
+      <collision name="collision_19_2"> 
+        <pose>5.9625 8.6 0.75 0 0 3.14159265359</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_19_2'>
+        <pose>5.9625 8.6 0.75 0 0 3.14159265359</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_20_2">
+      <collision name="collision_20_2">
+        <pose>5.9625 8.6 0.25 0 0 3.14159265359</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_20_2'>
+        <pose>5.9625 8.6 0.25 0 0 3.14159265359</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- 8 row -->
+
+    <link name="link_21_2">
+      <collision name="collision_21_2">
+        <pose>6.7125 8.6 0.25 0 0 3.14159265359</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_21_2'>
+        <pose>6.7125 8.6 0.25 0 0 3.14159265359</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_22_2">
+      <collision name="collision_22_2">
+        <pose>6.7125 8.6 1.25 0 0 3.14159265359</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_22_2'>
+        <pose>6.7125 8.6 1.25 0 0 3.14159265359</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_23_2">
+      <collision name="collision_23_2">
+        <pose>6.7125 8.6 0.75 0 0 3.14159265359</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_23_2'>
+        <pose>6.7125 8.6 0.75 0 0 3.14159265359</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <!-- 9 row -->
+
+    <link name="link_24_2">
+      <collision name="collision_24_2">
+        <pose>7.4625 8.6 0.75 0 0 3.14159265359</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_24_2'>
+        <pose>7.4625 8.6 0.75 0 0 3.14159265359</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_25_2">
+      <collision name="collision_25_2">
+        <pose>7.4625 8.6 0.25 0 0 3.14159265359</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_25_2'>
+        <pose>7.4625 8.6 0.25 0 0 3.14159265359</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_26_2">
+      <collision name="collision_26_2">
+        <pose>7.4625 8.6 1.25 0 0 3.14159265359</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_26_2'>
+        <pose>7.4625 8.6 1.25 0 0 3.14159265359</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_Lcorridor/meshes/green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+  
+  </model>
+</sdf> 
+

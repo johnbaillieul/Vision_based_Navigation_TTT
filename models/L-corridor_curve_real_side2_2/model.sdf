@@ -1,0 +1,353 @@
+<?xml version='1_0'?>
+<sdf version="1.5">
+  <model name="realistic_curve_side2_2">
+    <pose>0 0 0 0 0 1.57079633</pose>
+    <static>true</static>
+
+	<!-- 9 row -->
+    <link name="link_18_0">
+      <collision name="collision_18_0">
+        <pose>0.9 4.45 0.9 0 -1.5708</pose>
+        <geometry>
+          <box>
+            <size>0.31 0.465 0.36</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_18_0'>
+        <pose>0.9 4.45 0.9 0 0 -1.5708</pose>
+        <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_19_0">
+      <collision name="collision_19_0">
+        <pose>0.9 4.45 0.18 0 0 -1.5708</pose>
+        <geometry>
+          <box>
+            <size>0.31 0.465 0.36</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_19_0'>
+        <pose>0.9 4.45 0.18 0 0 -1.5708</pose>
+        <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_20_0">
+      <collision name="collision_20_0">
+        <pose>0.9 4.45 0.54 0 0 -1.5708</pose>
+        <geometry>
+          <box>
+            <size>0.31 0.465 0.36</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_20_0'>
+        <pose>0.9 4.45 0.54 0 0 -1.5708</pose>
+        <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+	<!-- 10 row -->
+    <link name="link_21_0">
+      <collision name="collision_21_0">
+        <pose>1.365 4.45 0.18 0 0 -1.5708</pose>
+        <geometry>
+          <box>
+            <size>0.31 0.465 0.36</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_21_0'>
+        <pose>1.365 4.45 0.18 0 0 -1.5708</pose>
+        <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <link name="link_22_0">
+      <collision name="collision_22_0">
+        <pose>1.365 4.45 0.54 0 0 -1.5708</pose>
+        <geometry>
+          <box>
+            <size>0.31 0.465 0.36</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_22_0'>
+        <pose>1.365 4.45 0.54 0 0 -1.5708</pose>
+        <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_23_0">
+      <collision name="collision_23_0">
+        <pose>1.365 4.45 0.9 0 0 -1.5708</pose>
+        <geometry>
+          <box>
+            <size>0.31 0.465 0.36</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_23_0'>
+        <pose>1.365 4.45 0.9 0 0 -1.5708</pose>
+        <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+	<!-- 11 row-->
+    <link name="link_24_0">
+      <collision name="collision_24_0">
+        <pose>1.83 4.45 0.54 0 0 -1.5708</pose>
+        <geometry>
+          <box>
+            <size>0.31 0.465 0.36</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_24_0'>
+        <pose>1.83 4.45 0.54 0 0 -1.5708</pose>
+        <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_25_0">
+      <collision name="collision_25_0">
+        <pose>1.83 4.45 0.9 0 0 -1.5708</pose>
+        <geometry>
+          <box>
+            <size>0.31 0.465 0.36</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_25_0'>
+        <pose>1.83 4.45 0.9 0 0 -1.5708</pose>
+        <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_26_0">
+      <collision name="collision_26_0">
+        <pose>1.83 4.45 0.18 0 0 -1.5708</pose>
+        <geometry>
+          <box>
+            <size>0.31 0.465 0.36</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_26_0'>
+        <pose>1.83 4.45 0.18 0 0 -1.5708</pose>
+        <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+ 
+	<!-- 12 row -->
+    <link name="link_27_0">
+      <collision name="collision_27_0">
+        <pose>2.295 4.45 0.9 0 -1.5708</pose>
+        <geometry>
+          <box>
+            <size>0.31 0.465 0.36</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_27_0'>
+        <pose>2.295 4.45 0.9 0 0 -1.5708</pose>
+        <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_28_0">
+      <collision name="collision_28_0">
+        <pose>2.295 4.45 0.18 0 0 -1.5708</pose>
+        <geometry>
+          <box>
+            <size>0.31 0.465 0.36</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_28_0'>
+        <pose>2.295 4.45 0.18 0 0 -1.5708</pose>
+        <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_29_0">
+      <collision name="collision_29_0">
+        <pose>2.295 4.45 0.54 0 0 -1.5708</pose>
+        <geometry>
+          <box>
+            <size>0.31 0.465 0.36</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_29_0'>
+        <pose>2.295 4.45 0.54 0 0 -1.5708</pose>
+        <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+	<!-- 10 row -->
+    <link name="link_30_0">
+      <collision name="collision_30_0">
+        <pose>2.76 4.45 0.18 0 0 -1.5708</pose>
+        <geometry>
+          <box>
+            <size>0.31 0.465 0.36</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_30_0'>
+        <pose>2.76 4.45 0.18 0 0 -1.5708</pose>
+        <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <link name="link_31_0">
+      <collision name="collision_31_0">
+        <pose>2.76 4.45 0.54 0 0 -1.5708</pose>
+        <geometry>
+          <box>
+            <size>0.31 0.465 0.36</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_31_0'>
+        <pose>2.76 4.45 0.54 0 0 -1.5708</pose>
+        <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_32_0">
+      <collision name="collision_32_0">
+        <pose>2.76 4.45 0.9 0 0 -1.5708</pose>
+        <geometry>
+          <box>
+            <size>0.31 0.465 0.36</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_32_0'>
+        <pose>2.76 4.45 0.9 0 0 -1.5708</pose>
+        <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+	<!-- 8 row -->
+    <link name="link_33_0">
+      <collision name="collision_33_0">
+        <pose>0.44 4.45 0.54 0 0 -1.5708</pose>
+        <geometry>
+          <box>
+            <size>0.31 0.465 0.36</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_33_0'>
+        <pose>0.44 4.45 0.54 0 0 -1.5708</pose>
+        <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <link name="link_34_0">
+      <collision name="collision_34_0">
+        <pose>0.4 4.45 0.9 0 0 -1.5708</pose>
+        <geometry>
+          <box>
+            <size>0.31 0.465 0.36</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_34_0'>
+        <pose>0.44 4.45 0.9 0 0 -1.5708</pose>
+        <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_35_0">
+      <collision name="collision_35_0">
+        <pose>0.44 4.45 0.18 0 0 -1.5708</pose>
+        <geometry>
+          <box>
+            <size>0.31 0.465 0.36</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_35_0'>
+        <pose>0.44 4.45 0.18 0 0 -1.5708</pose>
+        <geometry>
+            <mesh>
+              <uri>model://L-corridor_curve_real/meshes/exact_green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+  </model>
+</sdf> 
+

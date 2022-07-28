@@ -1,0 +1,65 @@
+<?xml version='1_0'?>
+<sdf version="1.5">
+  <model name="boxes_corridor model">
+    <pose>0 0 0 0 0 1.57079633</pose>
+    <static>true</static>
+    <!-- 1st row -->
+    <link name="link_0">
+      <collision name="collision_0">
+        <pose>0 0 1.25 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_0'>
+        <pose>0 0 1.25 0 0 1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/blue_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_1">
+      <collision name="collision_1">
+        <pose>0 0 0.75 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_1'>
+        <pose>0 0 0.75 0 0 1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_corridor/meshes/red_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+
+    <link name="link_2">
+      <collision name="collision_2">
+        <pose>0 0 0.25 0 0 1.57079633</pose>
+        <geometry>
+          <box>
+            <size>0.75 0.15 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='visual_2'>
+        <pose>0 0 0.25 0 0 1.57079633</pose>
+        <geometry>
+            <mesh>
+              <uri>model://boxes_1/meshes/green_circle_border.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf> 
+
